@@ -4,6 +4,21 @@
 //   const LoginScreen({Key? key}) : super(key: key);
 
 //   @override
+//   _LoginScreenState createState() => _LoginScreenState();
+// }
+
+// class _LoginScreenState extends State<LoginScreen> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       );
+//   }
+// }
+
+// class LoginScreen extends StatefulWidget {
+//   const LoginScreen({Key? key}) : super(key: key);
+
+//   @override
 //   State<LoginScreen> createState() => _LoginScreenState();
 // }
 
@@ -11,24 +26,22 @@
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-//       body: Container(
-//         padding:  const EdgeInsets.symmetric(horizontal: 20,),
-//         width: MediaQuery.of(context).size.width,
-//         child: SingleChildScrollView(
-//           child: Column(
-//             children: const <Widget>[
-//               TextField(
-//                 decoration: InputDecoration(
-//                   hintText: 'الايميل',
-//                   // prefixIcon: Icon(Icon.email),
-//                 ),
-//               ),
-
-//             ]
+//         body: Container(
+//       padding: const EdgeInsets.symmetric(
+//         horizontal: 20,
+//       ),
+//       width: MediaQuery.of(context).size.width,
+//       child: SingleChildScrollView(
+//         child: Column(children: const <Widget>[
+//           TextField(
+//             decoration: InputDecoration(
+//               hintText: 'الايميل',
+//               // prefixIcon: Icon(Icon.email),
 //             ),
-//         ),
-//       )
-//     );
+//           ),
+//         ]),
+//       ),
+//     ));
 //   }
 // }
 

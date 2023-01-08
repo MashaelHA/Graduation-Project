@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:project_visitor_to_eastrn/constants.dart';
 // import 'package:project_visitor_to_eastrn/Screens/Welcome/components/body.dart';
 
+// ignore: must_be_immutable
 class RoundedButton extends StatelessWidget {
   final String text;
   final Function press;
-  final Color color, textColor;
-  const RoundedButton({
+  late Color color, textColor;
+  RoundedButton({
     Key? key,
     this.text = "تسجيل الدخول",
     required this.press,
     this.color = kPrimaryLightColor,
-    this.textColor = Colors.pink,
+    this.textColor = Colors.pink, 
+    ButtonStyle ? style,
   }) : super(key: key);
 
   @override
