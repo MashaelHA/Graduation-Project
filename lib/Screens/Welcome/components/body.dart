@@ -1,10 +1,13 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
-import 'background.dart';
+
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
+
 import '../../../constants.dart';
+import '../../../widgets/signupview.dart';
+import 'background.dart';
 import '../../signup_screen.dart';
 import '../../home/home_screen.dart';
 
@@ -12,6 +15,8 @@ import '../../home/home_screen.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     Size? size = MediaQuery.of(context).size;
     return Background(
       child: SingleChildScrollView(
@@ -92,34 +97,19 @@ class Body extends StatelessWidget {
             SizedBox(
               height: size.height * 0.05,
             ),
-            
-
-             SizedBox(
+            SizedBox(
               width: size.width * 0.8,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => ChangePage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ChangePage()));
                 },
-                child: Text('تسجيل الدخول', style: Theme.of(context).textTheme.headline5,),
+                child: Text(
+                  'تسجيل الدخول',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
               ),
             ),
-            
-            
-            
-            
-            // RoundedButton(
-            //   text: "تسجيل الدخول",
-            //   color: kPrimaryLightColor,
-            //   textColor: const Color(0xFFFF234F),
-            //   onPressed: () {
-            //     // Navigator.push(
-            //     //     context,
-            //     //     MaterialPageRoute(
-            //     //         builder: (context) => const SecondRoute()));
-            //   },
-            // ),
-
             SizedBox(
               height: size.height * 0.05,
               child: TextButton(
@@ -133,73 +123,51 @@ class Body extends StatelessWidget {
                 ),
               ),
             ),
-
-            // const Text(
-            //   "نسيت كلمة المرور",
-            //   style: TextStyle(
-            //     fontWeight: FontWeight.bold,
-            //     color: kPrimaryLightColor,
-            //   ),
-            // ),
-
             SizedBox(
               width: size.width * 0.8,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => SignUp()));
+                 
+                    var snackbar = SnackBar(
+                        shape: RoundedRectangleBorder(
+                          // ignore: prefer_const_constructors
+                          side: BorderSide(color: Colors.blue, width: 1),
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        // ignore: prefer_const_constructors
+                        duration: Duration(minutes: 2),
+                        backgroundColor: Colors.white,
+                        // ignore: sized_box_for_whitespace
+                        content: Container(
+                          height: height / 1.6,
+                          width: double.infinity,
+                          child: SignUpView(),
+                        ));
+                    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                  
                 },
-                child: Text('إنشاء حساب جديد', style: Theme.of(context).textTheme.headline5,),
+                child: Text(
+                  'إنشاء حساب جديد',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
               ),
             ),
-
-            // RoundedButton(
-            //   text: "إنشاء حساب جديد",
-            //   color: kPrimaryLightColor,
-            //   textColor: const Color(0xFFFF234F),
-            //   onPressed: () {
-            //     Navigator.push(
-            //         context, MaterialPageRoute(builder: (context) => SignUp()));
-            //   },
-            // ),
-
-
             SizedBox(
               height: size.height * 0.05,
             ),
-
-
-
-             SizedBox(
+            SizedBox(
               width: 150,
               child: ElevatedButton(
                 onPressed: () {
                   // Navigator.push(
                   //     context, MaterialPageRoute(builder: (context) => SignUp()));
                 },
-                child: Text('الدخول كزائر', style: Theme.of(context).textTheme.headline4,),
+                child: Text(
+                  'الدخول كزائر',
+                  style: Theme.of(context).textTheme.headline4,
+                ),
               ),
             ),
-
-            
-            // SizedBox(
-            //   width: 150,
-            //   child: RoundedButton(
-            //     text: "الدخول كزائر",
-            //     style: ButtonStyle(
-            //         // ignore: prefer_const_constructors
-            //         backgroundColor:
-            //             MaterialStateProperty.all<Color>(Colors.pink),
-            //         foregroundColor: MaterialStateProperty.all<Color>(
-            //             Color.fromARGB(255, 3, 255, 255))),
-            //     // color: kPrimaryColor,
-            //     // textColor: const Color(0xFF1F80BD),
-            //     onPressed: () {
-            //       // ignore: avoid_print
-            //       print("login as visitor");
-            //     },
-            //   ),
-            // ),
           ],
         ),
       ),

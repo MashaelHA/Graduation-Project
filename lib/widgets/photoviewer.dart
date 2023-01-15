@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, prefer_const_constructors, prefer_const_constructors_in_immutables, prefer_typing_uninitialized_variables, unused_local_variable, prefer_interpolation_to_compose_strings
+
 import 'package:flutter/material.dart';
 
 class MyCustomWidget extends StatefulWidget {
@@ -54,7 +55,8 @@ class CardStack extends StatefulWidget {
   @override
   _CardStackState createState() => _CardStackState();
 }
-List <String> images=["third.jpg","secound.jpg","first.jpg","third.jpg","secound.jpg","first.jpg","four.PNG"];
+List <String> images=["secound.jpg","secound.jpg","first.jpg","third.jpg","secound.jpg","first.jpg","secound.jpg"];
+List <String> sites=["الخبر","الخبر","الخبر","الخبر","الخبر","الخبر","الخبر"];
 class _CardStackState extends State<CardStack> {
   late Animation<Offset> slideAnimation;
   late List<SlideCard> cardList;
@@ -139,17 +141,25 @@ class SlideCard extends StatelessWidget {
                 offset: Offset(1, 1),
               )
             ]*/),
-        child: Container(
-              margin: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                image:  DecorationImage(
-                  image: AssetImage("assets/"+images[index]),
-                  fit: BoxFit.fitHeight
+        child: Stack(
+          children: [
+           Container(
+                margin: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  image:  DecorationImage(
+                    image: AssetImage("assets/"+images[index]),
+                    fit: BoxFit.fitHeight
+                  ),
+                  //border: Border.all(color: Colors.white, width: 10 ),
+                  borderRadius: BorderRadius.circular(30)
                 ),
-                //border: Border.all(color: Colors.white, width: 10 ),
-                borderRadius: BorderRadius.circular(30)
               ),
-            )
+              Container(
+                height: height/4,
+                alignment: Alignment.bottomCenter,
+                child: Text(sites[index],style: TextStyle(color:Colors.white,fontSize: 25),),),
+              ],
+        )
       ),
     );
   }

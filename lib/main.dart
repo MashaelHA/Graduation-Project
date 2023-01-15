@@ -4,7 +4,7 @@ import 'Screens/Welcome/welcome_screen.dart';
 import 'constants.dart';
 // ignore: unused_import
 import 'package:flutter_localizations/flutter_localizations.dart';
-import './Screens/signup_screen.dart';
+// import './Screens/signup_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,26 +27,54 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primaryColor: kPrimaryColor,
           scaffoldBackgroundColor: Colors.white,
-          fontFamily: 'biotif',
+          fontFamily: 'Fontspring-DEMO-biotif',
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline5: const TextStyle(
                   // color: kPrimaryLightColor,
                   fontSize: 20,
-                  fontFamily: 'biotif',
+                  fontFamily: 'Fontspring-DEMO-biotif',
                   fontWeight: FontWeight.bold,
                 ),
                 headline6: const TextStyle(
                   color: Color(0xFF1F80BD),
                   fontSize: 20,
-                  fontFamily: 'biotif',
+                  fontFamily: 'Fontspring-DEMO-biotif',
                   fontWeight: FontWeight.bold,
                 ),
                 headline4: const TextStyle(
                   color: Color(0xFF8CC53B),
                   fontSize: 20,
-                  fontFamily: 'biotif',
+                  fontFamily: 'Fontspring-DEMO-biotif',
                   fontWeight: FontWeight.bold,
                 ),
+                headline3: const TextStyle(
+                  color: kPrimaryColor,
+                  fontSize: 20,
+                  fontFamily: 'Fontspring-DEMO-biotif',
+                  fontWeight: FontWeight.w500,
+                ),
+                headline2: const TextStyle(
+                  color: kTittileColor,
+                  fontSize: 20,
+                  fontFamily: 'Fontspring-DEMO-biotif',
+                  fontWeight: FontWeight.w200,
+                ),
+                headline1: const TextStyle(
+                  color: kPrimaryColor,
+                  fontSize: 20,
+                  fontFamily: 'Fontspring-DEMO-biotif',
+                  fontWeight: FontWeight.w200,
+                ),
+                // titleMedium: const TextStyle(
+                //   fontFamily: 'Fontspring-DEMO-biotif',
+                //   fontWeight: FontWeight.bold,
+                // ),
+                // titleSmall: const TextStyle(
+                //   color: Colors.red,
+                //   fontSize: 17,
+                //   fontFamily: 'Fontspring-DEMO-biotif',
+                //   fontWeight: FontWeight.normal,
+                // ),
               ),
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
@@ -74,7 +102,7 @@ class MyApp extends StatelessWidget {
       home: WelcomeScreen(),
 
       initialRoute: '/',
-      routes: {
+      routes: const {
         // '/': (ctx) => Tabs(_favoriteMeals),
         // signupScreen.routeName: (ctx) => SignUp(),
         // MealDetail.routeName: (ctx) =>

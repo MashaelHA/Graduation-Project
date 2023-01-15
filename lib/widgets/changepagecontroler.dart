@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 import '../Screens/home/components/homeapage.dart';
 
@@ -13,6 +13,7 @@ class ChangePageControllerImpl extends ChangePageController{
   chngepage(int currentpage) {
     this.currentpage=currentpage;
     update();
+    // ignore: avoid_print
     print(currentpage);
   }
    

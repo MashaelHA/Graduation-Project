@@ -1,14 +1,16 @@
-// ignore_for_file: unnecessary_import, implementation_imports, unused_import, use_key_in_widget_constructors
+// ignore_for_file: unnecessary_import, implementation_imports, unused_import, use_key_in_widget_constructors, override_on_non_overriding_member, annotate_overrides, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import '../../../constants.dart';
 import '../../../widgets/photoviewer.dart';
 
 class HomePage extends StatefulWidget {
   // const HomePage({super.key});
+  bool isFavorite = true;
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -18,10 +20,10 @@ class _HomePageState extends State<HomePage> {
   String title = "";
   List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم"];
   List<Icon> iconsitem = [
-    const Icon(Icons.fireplace, color: Colors.blue),
-    const Icon(Icons.beach_access_outlined, color: Colors.blue),
-    const Icon(Icons.line_weight_outlined, color: Colors.blue),
-    const Icon(Icons.restaurant, color: Colors.blue)
+    Icon(Icons.fireplace, color: Colors.blue),
+    Icon(Icons.beach_access_outlined, color: Colors.blue),
+    Icon(Icons.line_weight_outlined, color: Colors.blue),
+    Icon(Icons.restaurant, color: Colors.blue)
   ];
   List<String> photoitems = [
     "khabar.PNG",
@@ -44,27 +46,33 @@ class _HomePageState extends State<HomePage> {
             children: [
               Row(
                 children: [
-                  Icon(
-                    Icons.person,
-                    color: Colors.red,
-                    size: 40,
+                  // Icon(Icons.person,color: Colors.red,size: 40,),
+                  // SizedBox(width: 10,),
+                  // Text('مرحبا , محمد',style: TextStyle(color: Colors.red,fontSize: 17),),
+                  // SizedBox(width: width/2,),
+                  Container(
+                      alignment: Alignment.centerRight,
+                      child: Icon(
+                        Icons.search,
+                        size: 30,
+                      )),
+                  SizedBox(
+                    width: width / 2,
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Text(
                     'مرحبا , محمد',
-                    style: TextStyle(color: Colors.red, fontSize: 17),
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 17), //Theme.of(context).textTheme.titleSmall,
                   ),
-                  SizedBox(
-                    width: width / 1.7,
+                  Icon(
+                    Icons.person,
+                    color: Colors.red,
+                    size: 40,
                   ),
-                  Container(
-                      alignment: Alignment.centerLeft,
-                      child: Icon(
-                        Icons.search,
-                        size: 30,
-                      ))
                 ],
               ),
               //SizedBox(height: height/40,),
@@ -78,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 40,
                       fontWeight: FontWeight.w900,
                     ),
-                    textAlign: TextAlign.end,
+                    textAlign: TextAlign.start,
                   )),
 
               Container(
@@ -95,6 +103,9 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 10,
               ),
+
+
+
               Column(
                 children: [
                   Container(
@@ -104,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                     child: customwid,
                   ),
                   Container(
-                    padding: EdgeInsets.only(left: width / 2.5),
+                    padding: EdgeInsets.only(right: width / 2.5),
                     alignment: Alignment.center,
                     height: 20,
                     child: ListView.builder(
@@ -132,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                       width: 20,
                     );
                   },
-                  reverse: true,
+                  // reverse: true,
                   itemCount: items.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
@@ -208,72 +219,107 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Stack(children: <Widget>[
                                 Container(
-                                    decoration: BoxDecoration(
-                                      border: Border.all(color: Colors.grey),
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(15)),
-                                    ),
-                                    //padding: EdgeInsets.all(1),
-                                    margin: EdgeInsets.all(6),
-                                    height: height / 6.8,
-                                    width: double.infinity,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(15.0),
-                                      child: Image.asset(
-                                        "assets/" + photoitems[index],
-                                        fit: BoxFit.fill,
-                                      ),
-                                    )),
-                                Container(
-                                    padding: EdgeInsets.all(3),
-                                    margin: EdgeInsets.all(9),
-                                    height: 25,
-                                    width: 25,
-                                    color: Colors.grey,
-                                    alignment: Alignment.topLeft,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.grey),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(15)),
+                                  ),
+                                  //padding: EdgeInsets.all(1),
+                                  margin: EdgeInsets.all(6),
+                                  height: height / 6.8,
+                                  width: double.infinity,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15.0),
                                     child: Image.asset(
-                                      "assets/heart.png",
+                                      "assets/images/" + photoitems[index],
                                       fit: BoxFit.fill,
-                                    )),
+                                    ),
+                                  ),
+                                ),
+
+                                Container(
+                                  // padding: EdgeInsets.all(3),
+                                  margin: EdgeInsets.all(9),
+                                  // height: 25,
+                                  // width: 25,
+                                  //  color: Colors.grey,
+                                  alignment: Alignment.topRight,
+                                  child: Ink(
+                                    // decoration: BoxDecoration(
+                                    //   border: Border.all(
+                                    //       color: Colors.grey, width: 5.0),
+                                    //   color: Color.fromARGB(255, 60, 63, 62),
+                                    //   shape: BoxShape.circle,
+                                    // ),
+                                    child: InkWell(
+                                      // radius: 30,
+                                      // backgroundColor: Colors.greenAccent,
+                                      // borderRadius:
+                                      //     BorderRadius.circular(400.0),
+                                      onTap: () {},
+                                      child: Padding(
+                                        padding: EdgeInsets.all(5),
+                                        child: Icon(
+                                          Icons.favorite_border,
+                                          color: kPrimaryLightColor,
+                                          size: 20,
+                                          // shadows: [],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ]),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Text(
-                                        "4.8",
-                                        style: TextStyle(color: Colors.blue),
-                                      ),
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.red,
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    width: width / 7,
-                                  ),
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      Text("شتوية فاردو"),
+                                      Text(
+                                        "شتوية فاردو",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headline3,
+                                      ),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.end,
                                         children: [
+                                          Icon(
+                                            Icons.location_on,
+                                            color: SecondaryYellow,
+                                          ),
                                           Text(
                                             "الخبر الشبيلي",
-                                            style:
-                                                TextStyle(color: Colors.blue),
+                                            style: TextStyle(
+                                              color: SecondaryBlue,
+                                              fontSize: 12,
+                                              fontFamily:
+                                                  'Fontspring-DEMO-biotif',
+                                              fontWeight: FontWeight.w200,
+                                            ),
                                           ),
-                                          Icon(
-                                            Icons.location_on_outlined,
-                                            color: Colors.yellow,
-                                          )
                                         ],
                                       )
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: width / 8,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: SecondaryPink,
+                                      ),
+                                      Text(
+                                        "4.8",
+                                        style: TextStyle(
+                                          color: kPrimaryColor,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ],

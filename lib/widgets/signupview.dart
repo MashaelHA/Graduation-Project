@@ -1,6 +1,9 @@
+// ignore_for_file: use_key_in_widget_constructors, unused_local_variable, avoid_unnecessary_containers, non_constant_identifier_names, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
+import '../constants.dart';
+
 
 class SignUpView extends StatefulWidget {
   // const SignUpView({super.key});
@@ -31,8 +34,8 @@ class _SignUpViewState extends State<SignUpView> {
             indicatorColor: Colors.red,
             indicatorWeight: 5,
             tabs: [
-            Tab(child: Text("تسجيل",style: TextStyle(color: Colors.grey,fontSize: 25),),),
-            Tab(child: Text("تسجيل الدخول",style: TextStyle(color: Colors.grey,fontSize: 25),),),
+            Tab(child: Text("تسجيل",style: Theme.of(context).textTheme.headline2,),),
+            Tab(child: Text("تسجيل الدخول",style: Theme.of(context).textTheme.headline2,),),
           ]),
         ),
         body: TabBarView(
@@ -42,15 +45,15 @@ class _SignUpViewState extends State<SignUpView> {
                 children: [
                   SizedBox(height: height/45,),
                   form(name,"الاسم", TextInputType.name),
-                  SizedBox(height: height/45,),
+                  SizedBox(height: height/50,),
                   form(email,"الايميل", TextInputType.emailAddress),
-                  SizedBox(height: height/45,),
+                  SizedBox(height: height/50,),
                   form(phone,"الهاتف", TextInputType.phone),
-                  SizedBox(height: height/45,),
+                  SizedBox(height: height/50,),
                   form(password,"كلمة المرور", TextInputType.visiblePassword),
-                  SizedBox(height: height/45,),
+                  SizedBox(height: height/50,),
                   form(cpassword,"تاكيد كلمة المرور", TextInputType.visiblePassword),
-                  SizedBox(height: height/45,),
+                  SizedBox(height: height/55,),
                   button("تسجيل")
                 ],
               ),
@@ -92,7 +95,7 @@ class _SignUpViewState extends State<SignUpView> {
               
               hintText: Title,
               hintStyle:
-                  TextStyle(color: Color(0xff8c9289), fontFamily: 'Cobe'),
+                  TextStyle(color: Color(0xff8c9289), fontFamily: 'Fontspring-DEMO-biotif'),
             ),
           ),
         ),
@@ -104,7 +107,7 @@ class _SignUpViewState extends State<SignUpView> {
     String title,
   ) {
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.all(10),
       child: ElevatedButton(
           onPressed: () {
              loginUser();
