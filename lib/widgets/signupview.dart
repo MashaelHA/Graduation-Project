@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
+import '../Screens/Signup/components/survey.dart';
+import '../Screens/Welcome/welcome_screen.dart';
+import '../Screens/Welcome/components/background.dart';
 
 
 class SignUpView extends StatefulWidget {
@@ -22,47 +25,62 @@ class _SignUpViewState extends State<SignUpView> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 2,
-          elevation: 0,
-          backgroundColor: Colors.white,
-          
-          bottom: TabBar(
-            indicatorColor: Colors.red,
-            indicatorWeight: 5,
-            tabs: [
-            Tab(child: Text("تسجيل",style: Theme.of(context).textTheme.headline2,),),
-            Tab(child: Text("تسجيل الدخول",style: Theme.of(context).textTheme.headline2,),),
-          ]),
+    return Scaffold(
+      body: DefaultTabController(
+          length: 2,
+          child: Scaffold(
+            appBar: AppBar(
+              toolbarHeight: 2,
+              elevation: 0,
+              backgroundColor: Colors.white,
+              
+              bottom: TabBar(
+                indicatorColor: SecondaryPink, //Colors.red,
+                indicatorWeight: 5,
+                tabs: [
+                Tab(child: Text("تسجيل",style: Theme.of(context).textTheme.headline2,),),
+                Tab(child: Text("تسجيل الدخول",style: Theme.of(context).textTheme.headline2,),),
+              ]),
+            ),
+            body: TabBarView(
+              children: [
+                Container(
+                  child: Column(
+                    children: [
+                      SizedBox(height: height/45,),
+                      form(name,"الاسم", TextInputType.name),
+                      SizedBox(height: height/50,),
+                      form(email,"الايميل", TextInputType.emailAddress),
+                      SizedBox(height: height/50,),
+                      form(phone,"الهاتف", TextInputType.phone),
+                      SizedBox(height: height/50,),
+                      form(password,"كلمة المرور", TextInputType.visiblePassword),
+                      SizedBox(height: height/50,),
+                      form(cpassword,"تاكيد كلمة المرور", TextInputType.visiblePassword),
+                      SizedBox(height: height/55,),
+                      button("تسجيل")
+                    ],
+                  ),
+                )
+               ,
+                // Text("تسجيل")
+                SizedBox(
+                  width: 300,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => WelcomeScreen()));
+                    },
+                    child: Text(
+                      ' اضغط هنا لتسجيل الدخول',
+                      style: Theme.of(context).textTheme.headline5,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
-        body: TabBarView(
-          children: [
-            Container(
-              child: Column(
-                children: [
-                  SizedBox(height: height/45,),
-                  form(name,"الاسم", TextInputType.name),
-                  SizedBox(height: height/50,),
-                  form(email,"الايميل", TextInputType.emailAddress),
-                  SizedBox(height: height/50,),
-                  form(phone,"الهاتف", TextInputType.phone),
-                  SizedBox(height: height/50,),
-                  form(password,"كلمة المرور", TextInputType.visiblePassword),
-                  SizedBox(height: height/50,),
-                  form(cpassword,"تاكيد كلمة المرور", TextInputType.visiblePassword),
-                  SizedBox(height: height/55,),
-                  button("تسجيل")
-                ],
-              ),
-            )
-           ,
-            Text("تسجيل")
-          ],
-        ),
-      ),
     );
   }
 
@@ -85,7 +103,7 @@ class _SignUpViewState extends State<SignUpView> {
                 borderRadius: BorderRadius.circular(8),
               ),
               filled: true,
-              fillColor: Colors.white,
+              fillColor: kPrimaryLightColor,//Colors.white,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
                   borderSide: BorderSide(color: Colors.grey)),
@@ -110,21 +128,25 @@ class _SignUpViewState extends State<SignUpView> {
       padding: EdgeInsets.all(10),
       child: ElevatedButton(
           onPressed: () {
-             loginUser();
+            //  loginUser();
+            Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SurveyPage()));
           },
           child: Text(
             title,
             style: TextStyle(
               fontSize: 25,
-              color: Colors.white,
+              color: kPrimaryLightColor, // Colors.white,
             ),
           ),
           style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
                   // side: BorderSide(width: 1.0, color: Colors.black),
-                  borderRadius: BorderRadius.circular(25)),
-              minimumSize: const Size(double.infinity, 50),
-              primary: Color.fromARGB(255, 27, 24, 91),)),
+                  borderRadius: BorderRadius.circular(25)), 
+                  backgroundColor: kPrimaryColor,
+              minimumSize: const Size(double.infinity, 50), // Color.fromARGB(255, 27, 24, 91),
+              ),
+              ),
     );
   }
 

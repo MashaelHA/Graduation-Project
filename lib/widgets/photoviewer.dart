@@ -55,12 +55,12 @@ class CardStack extends StatefulWidget {
   @override
   _CardStackState createState() => _CardStackState();
 }
-List <String> images=["secound.jpg","secound.jpg","first.jpg","third.jpg","secound.jpg","first.jpg","secound.jpg"];
-List <String> sites=["الخبر","الخبر","الخبر","الخبر","الخبر","الخبر","الخبر"];
+List <String> images=["HaferAlbaten.jpg","Khafji.jpg","RasTanura.jpg","Jubail.jpg","Alahsa.jpg","Dhahran.jpg","Dammam.jpg","Khobar.jpg"];
+List <String> sites=["حفر الباطن","الخفجي","رأس تنورة","الجبيل","الأحساء","الظهران","الدمام","الخبر"];
 class _CardStackState extends State<CardStack> {
   late Animation<Offset> slideAnimation;
   late List<SlideCard> cardList;
-
+int counter=0;
   @override
   
   void initState() {
@@ -82,8 +82,18 @@ class _CardStackState extends State<CardStack> {
       if (status == AnimationStatus.completed) {
         widget.controller.reset();
         setState(
-          () => cardList.removeLast(),
-        );
+          () { 
+            cardList.removeLast();
+            counter++;
+            if(counter==images.length-1){
+            cardList = List.generate(
+               images.length,
+               (index) => SlideCard(index),
+              );
+            counter=0;
+          }
+            }
+       );
       }
     });
   }
@@ -157,7 +167,14 @@ class SlideCard extends StatelessWidget {
               Container(
                 height: height/4,
                 alignment: Alignment.bottomCenter,
-                child: Text(sites[index],style: TextStyle(color:Colors.white,fontSize: 25),),),
+                child: Text(sites[index],style: TextStyle(
+                  color:Colors.white,
+                  fontSize: 25,
+                  fontFamily: 'Fontspring-DEMO-biotif',
+                  // backgroundColor: Colors.black.withOpacity(0.4),
+                  ),
+                ),
+                ),
               ],
         )
       ),

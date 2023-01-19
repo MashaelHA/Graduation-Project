@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import '../Screens/home/components/homeapage.dart';
+import '../Screens/home/home_screen.dart';
+import '../Screens/Discover/discover_screen.dart';
+import '../Screens/plane/plane_screen.dart';
+import '../Screens/Favorite/favorite_screen.dart';
+import '../Screens/account/account_screen.dart';
 
 
 
@@ -22,10 +26,10 @@ class ChangePageControllerImpl extends ChangePageController{
     int currentpage=0;
     List <Widget> listpage = [
       HomePage(),
-      HomePage(),
-      HomePage(),
-      HomePage(),
-      HomePage(),
+      Discover(),
+      Plan(),
+      Favoraite(),
+      Account(),
     ];
   }
   

@@ -7,7 +7,7 @@ class Background extends StatelessWidget {
   const Background({
     Key? key,
     required this.child,
-    this.topImage = "assets/images/favicon.png",
+    this.topImage = "assets/favicon.png",
   }) : super(key: key);
 
   final String topImage;

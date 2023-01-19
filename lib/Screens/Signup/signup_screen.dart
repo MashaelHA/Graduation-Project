@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter/src/widgets/container.dart';
 // import 'package:flutter/src/widgets/framework.dart';
-import '../widgets/signupview.dart';
-import '../Screens/Welcome/components/background.dart';
+import '../../widgets/signupview.dart';
+import '../Welcome/components/background.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SignUp extends StatelessWidget {

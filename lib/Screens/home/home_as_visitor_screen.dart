@@ -5,22 +5,23 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import '../../../constants.dart';
-import '../../../widgets/photoviewer.dart';
+import '../../constants.dart';
+import '../../widgets/photoviewer.dart';
+import 'components/header.dart';
 
-class HomePage extends StatefulWidget {
+class HomePageVisitor extends StatefulWidget {
   // const HomePage({super.key});
   bool isFavorite = true;
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageVisitor> createState() => _HomePageVisitorState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageVisitorState extends State<HomePageVisitor> {
   String title = "";
   List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم"];
   List<Icon> iconsitem = [
-    Icon(Icons.fireplace, color: Colors.blue),
+    Icon(Icons.local_fire_department_outlined, color: Colors.blue),
     Icon(Icons.beach_access_outlined, color: Colors.blue),
     Icon(Icons.line_weight_outlined, color: Colors.blue),
     Icon(Icons.restaurant, color: Colors.blue)
@@ -41,40 +42,37 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey[150],
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(right: 10, top: 18),
+          // padding: EdgeInsets.only(right: 10, top: 18),
           child: Column(
             children: [
-              Row(
-                children: [
-                  // Icon(Icons.person,color: Colors.red,size: 40,),
-                  // SizedBox(width: 10,),
-                  // Text('مرحبا , محمد',style: TextStyle(color: Colors.red,fontSize: 17),),
-                  // SizedBox(width: width/2,),
-                  Container(
-                      alignment: Alignment.centerRight,
-                      child: Icon(
-                        Icons.search,
-                        size: 30,
-                      )),
-                  SizedBox(
-                    width: width / 2,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'مرحبا , محمد',
-                    style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 17), //Theme.of(context).textTheme.titleSmall,
-                  ),
-                  Icon(
-                    Icons.person,
-                    color: Colors.red,
-                    size: 40,
-                  ),
-                ],
-              ),
+              Header(),
+              // Row(
+              //   children: [
+              //     Container(
+              //         alignment: Alignment.centerRight,
+              //         child: Icon(
+              //           Icons.search,
+              //           size: 30,
+              //         )),
+              //     SizedBox(
+              //       width: width / 2,
+              //     ),
+              //     SizedBox(
+              //       width: 10,
+              //     ),
+              //     Text(
+              //       'مرحبا , محمد',
+              //       style: TextStyle(
+              //           color: Colors.red,
+              //           fontSize: 17), //Theme.of(context).textTheme.titleSmall,
+              //     ),
+              //     Icon(
+              //       Icons.person,
+              //       color: Colors.red,
+              //       size: 40,
+              //     ),
+              //   ],
+              // ),
               //SizedBox(height: height/40,),
               Container(
                   padding: EdgeInsets.symmetric(horizontal: 15),

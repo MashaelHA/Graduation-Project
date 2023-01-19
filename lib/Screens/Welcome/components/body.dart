@@ -8,14 +8,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constants.dart';
 import '../../../widgets/signupview.dart';
 import 'background.dart';
-import '../../signup_screen.dart';
-import '../../home/home_screen.dart';
+import '../../Signup/signup_screen.dart';
+import '../../home/components/tab.dart';
+import '../../home/home_as_visitor_screen.dart';
 
 // ignore: use_key_in_widget_constructors
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-     double height = MediaQuery.of(context).size.height;
+    double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     Size? size = MediaQuery.of(context).size;
     return Background(
@@ -159,8 +160,10 @@ class Body extends StatelessWidget {
               width: 150,
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //     context, MaterialPageRoute(builder: (context) => SignUp()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => HomePageVisitor(),
+                      ),)
+                      ;
                 },
                 child: Text(
                   'الدخول كزائر',

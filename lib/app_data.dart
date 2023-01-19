@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import '../models/catrgory.dart';
+import 'models/survey.dart';
+import './models/cities.dart';
+// import './widgets/city_categories.dart';
 // import '../models/meal.dart';
 
 // var image1 = 'assets/images/category_images/activites.jpg';
@@ -13,19 +15,22 @@ const Cateegories_data = const [
     id: 'c1',
     title: 'الأنشطة',
     // color: Colors.purple,
-    imageUrl: 'https://www.ootlah.com/wp-content/uploads/2022/08/2-halfmoon_0007_WhatsApp-Image-2022-04-29-at-4.06.28-PM-1.jpg',
+    imageUrl:
+        'https://www.ootlah.com/wp-content/uploads/2022/08/2-halfmoon_0007_WhatsApp-Image-2022-04-29-at-4.06.28-PM-1.jpg',
   ),
   Category(
     id: 'c2',
     title: 'المغامرات',
     // color: Colors.red,
-    imageUrl: 'https://cnn-arabic-images.cnn.io/cloudinary/image/upload/w_1920,c_scale,q_auto/cnnarabic/2019/03/12/images/123513.jpg',
+    imageUrl:
+        'https://cnn-arabic-images.cnn.io/cloudinary/image/upload/w_1920,c_scale,q_auto/cnnarabic/2019/03/12/images/123513.jpg',
   ),
   Category(
     id: 'c3',
     title: 'تأمل الطبيعة',
     // color: Colors.orange,
-    imageUrl: 'http://www.asdaa-okazz.com/uploads/original_images/c0407cO_O20a1d556-c1a3-498c-b888-a13228e6e7bc.jpeg',
+    imageUrl:
+        'http://www.asdaa-okazz.com/uploads/original_images/c0407cO_O20a1d556-c1a3-498c-b888-a13228e6e7bc.jpeg',
   ),
   Category(
     id: 'c4',
@@ -37,15 +42,73 @@ const Cateegories_data = const [
     id: 'c5',
     title: 'التخييم',
     // color: Colors.blue,
-    imageUrl: 'https://img.rezdy.com/PRODUCT_IMAGE/13699/emptyquarter_gallery_11_lg.jpg',
+    imageUrl:
+        'https://img.rezdy.com/PRODUCT_IMAGE/13699/emptyquarter_gallery_11_lg.jpg',
   ),
   Category(
     id: 'c6',
     title: 'التنزه في الحدائق',
     // color: Colors.green,
-    imageUrl: 'https://www.trfihi-parks.com/images/parks/LjLa8D_1537844822_1.jpg',
+    imageUrl:
+        'https://www.trfihi-parks.com/images/parks/LjLa8D_1537844822_1.jpg',
   ),
 ];
+
+const Cities_data = const [
+  City(
+    id: 'c1',
+    title: 'الخبر',
+    imageUrl:
+        // 'https://wondrousdrifter.com/wp-content/uploads/2022/06/Dammam-Saudi-Arabia-travel-728x410.jpg.webp',
+        // 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTPFm7W1AGt5XFl772SU_iUg0NKQmdMKRWILGXu-jhaSKgowxXl',
+        // 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTijHE5DB_VS81zZwEZGJ81Yt0aw-VbgOFrazw1EBQOgLCUnh2q',
+        'https://media.istockphoto.com/id/1256866846/photo/al-khobar-water-tower-at-sunrise-eastern-province-saudi-arabia.jpg?s=612x612&w=0&k=20&c=sZZMa27k9BZpQ-SJ55fqrKgC6739FQrdobSGu58VNYo=',
+  ),
+  City(
+    id: 'c2',
+    title: 'الدمام',
+    imageUrl:
+        'https://scontent.fdmm2-4.fna.fbcdn.net/v/t1.6435-9/118768944_3320568438022405_36412373333119783_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=SNeYIhXdd_8AX9EGf70&_nc_ht=scontent.fdmm2-4.fna&oh=00_AfCDpVWrq8yUHFR0OAvBXRyoSmh5cjT-MQjVWxzObRLOqg&oe=63F06CF9',
+  ),
+  City(
+    id: 'c3',
+    title: 'الجبيل',
+    imageUrl:
+        'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQDLecf4sEjE09laybxrRGxDp18C4eyc2eD6y4u0_LlL7TzEPJx',
+  ),
+  City(
+    id: 'c4',
+    title: 'الأحساء',
+    imageUrl:
+        'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQibuWR8QzfWiWWKn9x_sZaZeB9O_T04RCkvaMDZLO0CrAKjA1_',
+  ),
+  City(
+    id: 'c5',
+    title: 'الخفجي',
+    imageUrl:
+        'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU7qDHXQpWEDHmAiGLADc-ZynMLjjepi82Q9YyDg3zsnDBxWPy',
+  ),
+  City(
+    id: 'c6',
+    title: 'رأس تنورة',
+    imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-t7qezr31PdCimFtjYPDXzUFRRq5NOQ282L50t4EB7b8cEX2_',
+  ),
+  City(
+    id: 'c7',
+    title: 'حفر الباطن',
+    imageUrl:
+        'https://www.ewaahotels.com/uploads/image-slider/6900c1bed377c845d59bc871660e0e6a1583325948.jpg',
+  ),
+  City(
+    id: 'c8',
+    title: 'الظهران',
+    imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqtdhdCJ7_x476W9Ow4FTtdpmIaf5rAW1GZyOzP_0V5Tdsonuk',
+  ),
+];
+
+
 
 // const DUMMY_MEALS = const [
 //   Meal(
