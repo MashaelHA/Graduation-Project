@@ -8,5 +8,6 @@ const kTittileColor = Color(0xFF333333);
 const SecondaryYellow = Color(0xFFffC845);
 const SecondaryPink = Color(0xFFFF234F);
 const SecondaryBlue = Color(0xFF1F80BD);
+const SecondaryGreen = Color(0xFF8CC53B);
 
 const double defaultPadding = 16.0;

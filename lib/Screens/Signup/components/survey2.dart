@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../app_data.dart';
 import '../../../widgets/survey_item.dart';
 import '../../home/components/tab.dart';
+import '../../home/components/header.dart';
 
 class Cateegories extends StatelessWidget {
   @override
@@ -12,6 +13,7 @@ class Cateegories extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          Header(),
           Center(
             child: Padding(
               padding: EdgeInsets.only(
@@ -27,7 +29,8 @@ class Cateegories extends StatelessWidget {
               ),
             ),
           ),
-          Flexible(
+          Expanded(
+            flex: 2,
             child: GridView(
               padding: const EdgeInsets.all(20),
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
@@ -36,7 +39,7 @@ class Cateegories extends StatelessWidget {
                 // crossAxisSpacing: 20,
                 // mainAxisSpacing: 20,
                 // childAspectRatio: 3 / 4,
-                childAspectRatio: 3 / 3,
+                childAspectRatio: 4 / 3,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 4,
               ),
@@ -48,32 +51,35 @@ class Cateegories extends StatelessWidget {
               ).toList(),
             ),
           ),
-          SizedBox(
-            width: 300,
-            child: Center(
-              // child: Padding(
-              //   padding: const EdgeInsets.only(top: 30),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ChangePage(),
+          Expanded(
+            flex: 1,
+            child: SizedBox(
+              width: 300,
+              child: Center(
+                // child: Padding(
+                //   padding: const EdgeInsets.only(top: 30),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChangePage(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        // side: BorderSide(width: 1.0, color: Colors.black),
+                        borderRadius: BorderRadius.circular(25)),
+                    backgroundColor: Colors.pink,
+                    minimumSize: const Size(double.infinity, 50),
+                  ),
+                  child: const Text(
+                    "التالي",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
                     ),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      // side: BorderSide(width: 1.0, color: Colors.black),
-                      borderRadius: BorderRadius.circular(25)),
-                  backgroundColor: Colors.pink,
-                  minimumSize: const Size(double.infinity, 50),
-                ),
-                child: const Text(
-                  "التالي",
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
                   ),
                 ),
               ),

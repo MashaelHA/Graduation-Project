@@ -31,7 +31,7 @@ class SignUp extends StatelessWidget {
               height: height / 30
             ),
              SvgPicture.asset(
-              "assets/images/favicon.png",
+              "assets/favicon.png",
               height: size.height * 0.21,
             ),
             // Container(

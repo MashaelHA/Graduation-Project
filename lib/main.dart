@@ -36,13 +36,13 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
                 headline6: const TextStyle(
-                  color: Color(0xFF1F80BD),
+                  color: SecondaryBlue,
                   fontSize: 20,
                   fontFamily: 'Fontspring-DEMO-biotif',
                   fontWeight: FontWeight.bold,
                 ),
                 headline4: const TextStyle(
-                  color: Color(0xFF8CC53B),
+                  color: SecondaryGreen,
                   fontSize: 20,
                   fontFamily: 'Fontspring-DEMO-biotif',
                   fontWeight: FontWeight.bold,
@@ -64,6 +64,23 @@ class MyApp extends StatelessWidget {
                   fontSize: 20,
                   fontFamily: 'Fontspring-DEMO-biotif',
                   fontWeight: FontWeight.w200,
+                ),
+                headlineLarge: const TextStyle(
+                  color: kTittileColor,
+                  fontFamily: 'Fontspring-DEMO-biotif',
+                  fontSize: 24,
+                ),
+                subtitle1: const TextStyle(
+                  color: kTittileColor,
+                  fontFamily: 'Fontspring-DEMO-biotif',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w200
+                ),
+                subtitle2: const TextStyle(
+                  color: kPrimaryLightColor,
+                  fontFamily: 'Fontspring-DEMO-biotif',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w900
                 ),
                 // titleMedium: const TextStyle(
                 //   fontFamily: 'Fontspring-DEMO-biotif',

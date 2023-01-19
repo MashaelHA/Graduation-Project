@@ -45,21 +45,23 @@ class _SignUpViewState extends State<SignUpView> {
             body: TabBarView(
               children: [
                 Container(
-                  child: Column(
-                    children: [
-                      SizedBox(height: height/45,),
-                      form(name,"الاسم", TextInputType.name),
-                      SizedBox(height: height/50,),
-                      form(email,"الايميل", TextInputType.emailAddress),
-                      SizedBox(height: height/50,),
-                      form(phone,"الهاتف", TextInputType.phone),
-                      SizedBox(height: height/50,),
-                      form(password,"كلمة المرور", TextInputType.visiblePassword),
-                      SizedBox(height: height/50,),
-                      form(cpassword,"تاكيد كلمة المرور", TextInputType.visiblePassword),
-                      SizedBox(height: height/55,),
-                      button("تسجيل")
-                    ],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        SizedBox(height: height/45,),
+                        form(name,"الاسم", TextInputType.name),
+                        SizedBox(height: height/50,),
+                        form(email,"الايميل", TextInputType.emailAddress),
+                        SizedBox(height: height/50,),
+                        form(phone,"الهاتف", TextInputType.phone),
+                        SizedBox(height: height/50,),
+                        form(password,"كلمة المرور", TextInputType.visiblePassword),
+                        SizedBox(height: height/50,),
+                        form(cpassword,"تاكيد كلمة المرور", TextInputType.visiblePassword),
+                        SizedBox(height: height/55,),
+                        button("تسجيل")
+                      ],
+                    ),
                   ),
                 )
                ,
