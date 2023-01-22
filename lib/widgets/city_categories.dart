@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 
 class CityCategories extends StatelessWidget {
-  // const CategoryItem({super.key});
 
   final String id;
   final String title;

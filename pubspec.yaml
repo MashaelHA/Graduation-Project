@@ -38,6 +38,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   cached_network_image: ^3.2.0
+  grouped_list: ^1.3.1
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -126,6 +128,14 @@ flutter:
           weight: 300
         - asset: assets/fonts/Fontspring-DEMO-biotif-lightitalic.otf
           style: italic
+
+    - family: SST-Arabic-Roman
+      fonts:
+        - asset: assets/fonts/Fontspring-DEMO-biotif-regular.otf
+        # - assets: assets/fonts/Fontspring-DEMO-biotif-black.otf
+        #   weiht: 900
+        # - asset: assets/fonts/Fontspring-DEMO-biotif-bold.otf
+        #   weight: 700
 
 
     # - family: biotif

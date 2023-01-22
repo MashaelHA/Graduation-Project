@@ -25,12 +25,12 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(
-              height: size.height * 0.05,
+              height: size.height * 0.4,
             ),
-            SvgPicture.asset(
-              "assets/images/favicon.png",
-              height: size.height * 0.31,
-            ),
+            // Image.asset(
+            //   "assets/favicon.png",
+            //   height: size.height * 0.31,
+            // ),
             SizedBox(
               width: 300,
               child: TextFormField(

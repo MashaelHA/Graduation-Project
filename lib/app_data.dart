@@ -5,10 +5,6 @@ import 'package:flutter/material.dart';
 import 'models/survey.dart';
 import './models/cities.dart';
 // import './widgets/city_categories.dart';
-// import '../models/meal.dart';
-
-// var image1 = 'assets/images/category_images/activites.jpg';
-// var image2 = Image(image: ImageCache(./));
 
 const Cateegories_data = const [
   Category(
