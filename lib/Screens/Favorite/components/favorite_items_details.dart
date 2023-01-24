@@ -10,6 +10,9 @@ class FavoriteItemsDetalis extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('k'),
+      ),
       body: Container(
         child: Column(
           children: [

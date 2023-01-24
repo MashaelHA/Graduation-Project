@@ -28,7 +28,7 @@ class ChangePageControllerImpl extends ChangePageController{
       HomePage(),
       Discover(),
       Plan(),
-      Favoraite(),
+      Favoraite(id: '11',title: 'k',imageUrl: 'uio',),
       Account(),
     ];
   }

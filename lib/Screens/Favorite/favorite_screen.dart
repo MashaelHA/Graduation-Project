@@ -8,6 +8,15 @@ import 'components/item_favorite.dart';
 
 class Favoraite extends StatelessWidget {
   // const Favoraite({Key? key}) : super(key: key);
+  final String id;
+  final String title;
+  final String imageUrl;
+
+  const Favoraite({
+    required this.id,
+    required this.title,
+    required this.imageUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +26,7 @@ class Favoraite extends StatelessWidget {
           children: [
             Header(),
             Expanded(
-              child: ItemsFavorite(),
+              child: ItemsFavorite(id,title,imageUrl),
             ),
           ],
         ),

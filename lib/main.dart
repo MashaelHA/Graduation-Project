@@ -5,6 +5,7 @@ import 'constants.dart';
 // ignore: unused_import
 import 'package:flutter_localizations/flutter_localizations.dart';
 // import './Screens/signup_screen.dart';
+import 'Screens/places/places_screens.dart';
 
 void main() => runApp(MyApp());
 
@@ -118,16 +119,19 @@ class MyApp extends StatelessWidget {
           )),
       home: WelcomeScreen(),
 
-      initialRoute: '/',
-      routes: const {
-        // '/': (ctx) => Tabs(_favoriteMeals),
-        // signupScreen.routeName: (ctx) => SignUp(),
-        // MealDetail.routeName: (ctx) =>
-        //     MealDetail(_toggleFavorit, _isMealFavorite),
-      }, // pushNamed
-      onUnknownRoute: (settings) {
-        return MaterialPageRoute(builder: (ctx) => WelcomeScreen());
-      },
+      // initialRoute: '/',
+      // routes: const {
+      //    '/': (ctx) => WelcomeScreen(),
+      //   '/category-places':(context) => CategoryPlaces(),
+
+      //   // '/': (ctx) => Tabs(_favoriteMeals),
+      //   // signupScreen.routeName: (ctx) => SignUp(),
+      //   // MealDetail.routeName: (ctx) =>
+      //   //     MealDetail(_toggleFavorit, _isMealFavorite),
+      // }, // pushNamed
+      // onUnknownRoute: (settings) {
+      //   return MaterialPageRoute(builder: (ctx) => WelcomeScreen());
+      // },
     );
   }
 }

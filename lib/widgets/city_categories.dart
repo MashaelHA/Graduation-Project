@@ -1,20 +1,39 @@
 // ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import '../Screens/places/places_screens.dart';
+import '../constants.dart';
 
 class CityCategories extends StatelessWidget {
-
   final String id;
   final String title;
   final String imageUrl;
 
   const CityCategories(this.id, this.title, this.imageUrl);
 
+
+  void selectCity(BuildContext ctx) {
+     Navigator.push(ctx,
+                      MaterialPageRoute(builder: (context) => CategoryPlaces(id,title),),);
+  }
+
+  // void selectCity(BuildContext ctx) {
+  //   Navigator.of(ctx).pushNamed(
+  //    '/category-places',
+  //    arguments: {
+  //     'id': id,
+  //     'title': title,
+  //    }
+  //   );
+  // }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: InkWell(
-        onTap: () {},
+        onTap: () => selectCity(context),
+        splashColor: Theme.of(context).primaryColor, //kPrimaryColor
+        borderRadius: BorderRadius.circular(15),
         child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
@@ -51,7 +70,7 @@ class CityCategories extends StatelessWidget {
                         fontSize: 30,
                         color: Colors.white,
                         fontFamily: 'Fontspring-DEMO-biotif',
-                        ),
+                      ),
                     ),
                     decoration: BoxDecoration(
                       color: Colors.black.withOpacity(0.4),
