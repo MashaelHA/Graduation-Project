@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
+import '../../widgets/place_item.dart';
 import '../../models/survey.dart';
 import '../../app_data.dart';
 
@@ -10,7 +11,7 @@ class CategoryPlaces extends StatelessWidget {
   final String categoryId;
   final String categoryTitle;
 
-  const CategoryPlaces(this.categoryId,this.categoryTitle);
+  const CategoryPlaces(this.categoryId, this.categoryTitle);
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +30,16 @@ class CategoryPlaces extends StatelessWidget {
       body: Center(
         child: ListView.builder(
           itemBuilder: (ctx, index) {
-            return Text(filterdPlaces[index].title);
+            // return Text(filterdPlaces[index].title);
+            return PlaceItem(
+              id: filterdPlaces[index].id,
+              title: filterdPlaces[index].title,
+              imageUrl: filterdPlaces[index].imageUrl,
+              placeType: filterdPlaces[index].placeType,
+            );
           },
           itemCount: filterdPlaces.length,
-          ),
+        ),
       ),
     );
   }
