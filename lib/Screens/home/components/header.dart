@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class Header extends StatefulWidget {
@@ -13,12 +15,12 @@ class _HeaderState extends State<Header> {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      padding: EdgeInsets.only(right: 10, top: 18),
+      padding: const EdgeInsets.only(right: 10, top: 18),
       child: Row(
         children: [
           Container(
             alignment: Alignment.centerRight,
-            child: Icon(
+            child: const Icon(
               Icons.search,
               size: 30,
             ),
@@ -26,16 +28,16 @@ class _HeaderState extends State<Header> {
           SizedBox(
             width: width / 2,
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
-          Text(
+          const Text(
             'مرحبا , محمد',
             style: TextStyle(
                 color: Colors.red,
                 fontSize: 17), //Theme.of(context).textTheme.titleSmall,
           ),
-          Icon(
+          const Icon(
             Icons.person,
             color: Colors.red,
             size: 40,

@@ -1,6 +1,3 @@
-// ignore_for_file: unused_import
-
-import 'package:flutter/material.dart';
 
 class City {
   final String id;

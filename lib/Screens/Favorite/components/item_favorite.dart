@@ -1,8 +1,8 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, unused_import
 
 import 'package:flutter/material.dart';
-import 'package:project_visitor_to_eastrn/constants.dart';
-import 'package:project_visitor_to_eastrn/models/survey.dart';
+import '../../../constants.dart';
+import '../../../models/survey.dart';
 
 import '../../../app_data.dart';
 // import '../../../models/survey.dart';

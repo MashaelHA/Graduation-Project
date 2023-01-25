@@ -201,12 +201,11 @@ const PlaceType_data = const [
     categories: [
       'c2',
       'c1',
-      'C5',
-      'c6',
+      'C8',
     ],
-    title: 'البحيرة الكبرى',
+    title: 'إثراء ( مركز الملك عبدالعزيز الثقافي العالمي )',
     imageUrl:
-        'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bGFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        'https://www.visitsaudi.com/content/dam/no-dynamic-media-folder/manifest-batch3r/dammam-refresh/dammam_refresh_winter_campaign_card_2.jpg',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -215,17 +214,17 @@ const PlaceType_data = const [
       'استمتاع المناظر الجملية'
     ],
     placeType: PlaceType.Activities,
-    mapUrl: '',
+    mapUrl: 'https://goo.gl/maps/ajzx9MmmuR6BVaTh6',
     description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      'افتتح "مركز الملك عبدالعزيز الثّقافي العالمي"، والمعروف اختصارًا بـ "إثراء"، في عام 2017م، ليصبح محضنًا هامّاً للثقافة السعوديَّة، وتحفةً فنيَّةً أخَّاذة التصميم، مستوحاة من أشكال الصخور النفطيَّة، والرياح الصحروايَّة المحاطة بأنبوب فولاذيٍّ طوله 350 كم',
+      'دى "إثراء" رؤيةٌ طموحةٌ ليصبح مركزًا ثقافيًّا رياديًّا في المملكة العربيًّة السعوديًّة، وملتقى للفنِّ والعلم، وعندما تذهب إلى "إثراء"، ستشاهد مساحة هائلة تبلغ 85.000 متر مربَّع، تضم متحفًا ومسرحًا ومكتبةً وسينما ومجموعةً من المعارض ومختبرًا للأفكار والمعرفة، بقاعات ذات تصاميمٍ معماريَّة مذهلة',
+      // 'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
-    isTrending: false,
+    isTrending: true,
     isBeach: true,
     isActivities: true,
-    isResturant: false,
+    isResturant: true,
     isHotel: false,
   ),
   Places(
@@ -234,9 +233,9 @@ const PlaceType_data = const [
       'c2',
       'c1',
     ],
-    title: 'البحيرات الصغرى',
+    title: 'شاطئ نصف القمر',
     imageUrl:
-        'https://images.unsplash.com/photo-1580100586938-02822d99c4a8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGxha2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+        'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/93/4c/e7/half-moon-beach.jpg?w=1200&h=-1&s=1',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -245,7 +244,7 @@ const PlaceType_data = const [
       'استمتاع المناظر الجملية'
     ],
     placeType: PlaceType.Activities,
-    mapUrl: '',
+    mapUrl: 'https://goo.gl/maps/oZo84cAxbjiCcwtt5',
     description: [
       'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
       'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
@@ -263,9 +262,9 @@ const PlaceType_data = const [
     categories: [
       'c2',
     ],
-    title: 'بحيرة الزمرد',
+    title: 'القرية الشعبية',
     imageUrl:
-        'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+        'https://www.viewsaudi.com/ar/wp-content/uploads/2021/04/Heritage-Village-Dammam-1.png',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -274,17 +273,17 @@ const PlaceType_data = const [
       'استمتاع المناظر الجملية'
     ],
     placeType: PlaceType.CityDown,
-    mapUrl: '',
+    mapUrl: 'https://goo.gl/maps/7LYw1LLbTQLsi8sPA',
     description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      'تنقسم القرية الشّعبيّة بجزئيها إلى متحفٍ تراثيّ ومطعمٍ شعبيّ يأخذك برحلةٍ عبر التاريخ،',
+      'لتعيش نمط الحياة البسيطة في عصورٍ ماضية، ويضمّ المبنى المؤلَّف من خمسة طوابق متحفًا تُعرض فيه العديد من المجوهرات والمخطوطات والأقمشة وغيرها من القطع الأثريّة،',
+      'وتذوّق أشهى الأطباق المحليّة مثل: أطباق المزّة التّقليديّة، وأطباق اللحوم المشويّة، والأرز، والتي تعكس تجربة الطّعام الشّعبيّ الأصيل في البيت السعودي.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
     isTrending: false,
-    isBeach: true,
+    isBeach: false,
     isActivities: true,
-    isResturant: false,
+    isResturant: true,
     isHotel: false,
   ),
   Places(
@@ -292,9 +291,9 @@ const PlaceType_data = const [
     categories: [
       'c3',
     ],
-    title: 'شاطئ الأول',
+    title: 'مول الفناتير',
     imageUrl:
-        'https://images.unsplash.com/photo-1493558103817-58b2924bce98?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAxfHxiZWFjaHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+        'https://www.tripswd.com/wp-content/uploads/2021/01/Jubail-Malls-3.jpg',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -302,8 +301,8 @@ const PlaceType_data = const [
       'تناول وجبة الغداء',
       'استمتاع المناظر الجملية'
     ],
-    placeType: PlaceType.Activities,
-    mapUrl: '',
+    placeType: PlaceType.CityDown,
+    mapUrl: 'https://goo.gl/maps/TTL1BpDDeLFM8wLA7',
     description: [
       'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
       'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
@@ -311,9 +310,9 @@ const PlaceType_data = const [
       'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
     isTrending: false,
-    isBeach: true,
+    isBeach: false,
     isActivities: true,
-    isResturant: false,
+    isResturant: true,
     isHotel: false,
   ),
   Places(
@@ -321,9 +320,9 @@ const PlaceType_data = const [
     categories: [
       'c3',
     ],
-    title: 'الشاطىء الكبير',
+    title: 'محمية الجبيل',
     imageUrl:
-        'https://images.unsplash.com/photo-1519046904884-53103b34b206?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2h8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        'https://www.travellwd.com/wp-content/uploads/2019/09/%D9%85%D8%AD%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%AC%D8%A8%D9%8A%D9%84-700x468.jpg',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -332,12 +331,12 @@ const PlaceType_data = const [
       'استمتاع المناظر الجملية'
     ],
     placeType: PlaceType.Activities,
-    mapUrl: '',
+    mapUrl: 'https://goo.gl/maps/MF6kA2EvmqgPjeWd8',
     description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      'محمية الجبيل للأحياء الفطرية هي محمية طبيعة في المملكة العربية السعودية تحت إشراف الهيئة السعودية للحياة الفطرية',
+      // 'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      // 'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
     isTrending: false,
     isBeach: true,
@@ -350,9 +349,9 @@ const PlaceType_data = const [
     categories: [
       'c3',
     ],
-    title: 'شاطىء الصخور',
+    title: 'شاطىء الفناتير',
     imageUrl:
-        'https://images.unsplash.com/photo-1519602035691-16ac091344ef?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjE1fHxiZWFjaHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+        'https://www.google.com/maps/place/Corniche+Fanateer/@27.1546064,49.5693479,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNqHvW27orML9NAGUEQt-i-QiSzRHphbKllfJw5!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNqHvW27orML9NAGUEQt-i-QiSzRHphbKllfJw5%3Dw203-h270-k-no!7i3024!8i4032!4m5!3m4!1s0x3e350e2ab09a35a7:0x76b722d12c49597a!8m2!3d27.1546064!4d49.5693479?hl=en-US#',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -360,10 +359,10 @@ const PlaceType_data = const [
       'تناول وجبة الغداء',
       'استمتاع المناظر الجملية'
     ],
-    placeType: PlaceType.Cammping,
-    mapUrl: '',
+    placeType: PlaceType.Activities,
+    mapUrl: 'https://goo.gl/maps/BbMupC7vgLZnAXaU6',
     description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      'يعتبر شاطئ الفناتير من الشواطئ الحديثة في مدينة الجبيل فتم تطويره لزيادة نسبة السياحة في الجبيل حيث يتوفر به العديد من المرافق والخدمات الحيوية، كما يوجد به أفضل أنواع السياحة في مدينة الجبيل سياحة الألعاب الترفيهية التي تنتشر على الشاطئ.',
       'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
       'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
       'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
@@ -379,9 +378,9 @@ const PlaceType_data = const [
     categories: [
       'c4',
     ],
-    title: 'الصحراء الكبرى',
+    title: 'جبل القارة',
     imageUrl:
-        'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZGVzZXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        'https://www.visitsaudi.com/content/dam/no-dynamic-media-folder/manifest-batch3r/ahsa-refresh/ahsa_winter_campaign_card_1.jpg',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -389,29 +388,28 @@ const PlaceType_data = const [
       'تناول وجبة الغداء',
       'استمتاع المناظر الجملية'
     ],
-    placeType: PlaceType.Activities,
-    mapUrl: '',
+    placeType: PlaceType.Adventures,
+    mapUrl: 'https://goo.gl/maps/yn27Roo8GCGZ5nwu5',
     description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      'يبلغ ارتفاع جبل القارة حوالي 75 مترًا (أو حوالي 250 قدمًا) — والمشهد من قمة الواحة التي تبلغ مساحتها 30 ألف فدان أدناه لا يفوت.',
+      'قمم الحجر الجيري الضبابية تستحق المشاهدة أيضًا. استكشف شبكة الكهوف التي تشق ممرات متعرجة تحيط بها الجدران الصخرية المرتفعة، وقم بزيارة متحف أرض الحضارات للتعرف على تاريخ المنطقة الذي يعود إلى آلاف السنين.',
+      // 'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
-    isTrending: false,
-    isBeach: true,
+    isTrending: true,
+    isBeach: false,
     isActivities: true,
-    isResturant: false,
+    isResturant: true,
     isHotel: false,
   ),
   Places(
     id: 'm11',
     categories: [
-      'c4',
-      'c1',
+      'c5',
     ],
-    title: 'الصحراء الغربية',
+    title: 'الخفجي مول',
     imageUrl:
-        'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+        'https://fastly.4sqi.net/img/general/600x600/60735779_zvloOmlUf3Yq_AZZv6uW61pbovjdZYXrmjT5nQRfSUI.jpg',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -419,8 +417,8 @@ const PlaceType_data = const [
       'تناول وجبة الغداء',
       'استمتاع المناظر الجملية'
     ],
-    placeType: PlaceType.Activities,
-    mapUrl: '',
+    placeType: PlaceType.CityDown,
+    mapUrl: 'https://goo.gl/maps/VsuRUcqb2UsHcRU58',
     description: [
       'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
       'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
@@ -428,17 +426,17 @@ const PlaceType_data = const [
       'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
     isTrending: false,
-    isBeach: true,
+    isBeach: false,
     isActivities: true,
-    isResturant: false,
+    isResturant: true,
     isHotel: false,
   ),
   Places(
     id: 'm12',
     categories: [
-      'c4',
+      'c5',
     ],
-    title: 'الصحراء الرملية',
+    title: 'حديقة العبير بالخفجي',
     imageUrl:
         'https://images.unsplash.com/photo-1452022582947-b521d8779ab6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODN8fGRlc2VydHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
     activities: [
@@ -448,16 +446,16 @@ const PlaceType_data = const [
       'تناول وجبة الغداء',
       'استمتاع المناظر الجملية'
     ],
-    placeType: PlaceType.Exploration,
-    mapUrl: '',
+    placeType: PlaceType.GardenPark,
+    mapUrl: 'https://goo.gl/maps/RE9n5mEcsh9UpBcu9',
     description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      'واحدة من معالم السياحة في الخفجي التي تُعد مُتنفسًا جيدًا',
+      'تضم الحديقة مساحات من الخُضرة مُنظّمة ومُهندمة بشكل جيد تحث على الاستجمام والاسترخاء للباحثين عن الهدوء مع مناطق ترفيه لألعاب الأطفال.',
+      // 'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
     isTrending: false,
-    isBeach: true,
+    isBeach: false,
     isActivities: true,
     isResturant: false,
     isHotel: false,
@@ -467,94 +465,9 @@ const PlaceType_data = const [
     categories: [
       'c5',
     ],
-    title: 'المدينة الأولى',
+    title: 'ميدان الفروسية',
     imageUrl:
-        'https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
-    activities: [
-      'زيارة المواقع الأثرية',
-      'جولة سياحية على الأقدام',
-      'زيارة المراكز التجارية للتبضع',
-      'تناول وجبة الغداء',
-      'استمتاع المناظر الجملية'
-    ],
-    placeType: PlaceType.CityDown,
-    mapUrl: '',
-    description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-    ],
-    isTrending: false,
-    isBeach: true,
-    isActivities: true,
-    isResturant: false,
-    isHotel: false,
-  ),
-  // PlaceType(
-  //   id: 'm14',
-  //   categories: [
-  //     'c5',
-  //   ],
-  //   title: 'المدينة الثانية',
-  //   tripType: TripType.Activities,
-  //   season: Season.Winter,
-  //   imageUrl:
-  //       'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjR8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
-  //   duration: 30,
-  //   activities: [
-  //     'زيارة المواقع الأثرية',
-  //     'جولة سياحية على الأقدام',
-  //     'زيارة المراكز التجارية للتبضع',
-  //     'تناول وجبة الغداء',
-  //     'استمتاع المناظر الجملية'
-  //   ],
-  //   program: [
-  //     'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-  //     'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-  //     'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-  //     'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-  //   ],
-  //   isInSummer: true,
-  //   isForFamilies: true,
-  //   isInWinter: true,
-  // ),
-  // Trip(
-  //   id: 'm15',
-  //   categories: [
-  //     'c5',
-  //   ],
-  //   title: 'المدينة القديمة',
-  //   tripType: TripType.Activities,
-  //   season: Season.Winter,
-  //   imageUrl:
-  //       'https://images.unsplash.com/photo-1519923041107-e4dc8d9193da?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njd8fG9sZCUyMGNpdHl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
-  //   duration: 30,
-  //   activities: [
-  //     'زيارة المواقع الأثرية',
-  //     'جولة سياحية على الأقدام',
-  //     'زيارة المراكز التجارية للتبضع',
-  //     'تناول وجبة الغداء',
-  //     'استمتاع المناظر الجملية'
-  //   ],
-  //   program: [
-  //     'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-  //     'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-  //     'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-  //     'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-  //   ],
-  //   isInSummer: true,
-  //   isForFamilies: true,
-  //   isInWinter: true,
-  // ),
-  Places(
-    id: 'm16',
-    categories: [
-      'c6',
-    ],
-    title: 'رياضة التثلج',
-    imageUrl:
-        'https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2tpaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+        'https://www.urtrips.com/wp-content/uploads/2019/01/Tourism-in-Khafji-1-1.jpg',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -563,12 +476,70 @@ const PlaceType_data = const [
       'استمتاع المناظر الجملية'
     ],
     placeType: PlaceType.Activities,
+    mapUrl: 'https://goo.gl/maps/WDVgPgN9fFtE52BX8',
+    description: [
+      'يُعد ركوب الخيل من أكثر الأنشطة التراثية التي تمتاز بها مدينة الخفجي السعودية بل ومدن المملكة بصفة عامة',
+      'لذا كان من الطبيعي أن ينضم ميدان الفروسية لقائمة افضل اماكن سياحيه في الخفجي .',
+      'تُقام السباقات الثلاثاء من كل أسبوع، ويُمكنك التواصل مع إدارة المكان مُسبقًا للتفاوض بشأن أمور الحجز.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+    ],
+    isTrending: false,
+    isBeach: false,
+    isActivities: true,
+    isResturant: false,
+    isHotel: false,
+  ),
+  Places(
+    id: 'm14',
+    categories: [
+      'c5',
+    ],
+    title: 'كورنيش الخفجي',
+    imageUrl:
+        'https://www.urtrips.com/wp-content/uploads/2019/01/Tourism-in-Khafji-2-1.jpg',
+    activities: [
+      'زيارة المواقع الأثرية',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    placeType: PlaceType.Activities,
+    mapUrl: 'https://goo.gl/maps/HchszUNuZwSM4JNQ9',
+    description: [
+      'من أهم معالم جذب السياحه في الخفجي وأكثرها شعبية وزيارة من سكان المدينة المحليين والمقيمين بالمملكة والدول المُجاورة بل يعدُّه البعض المُتنفس الرئيسي والوحيد لأهل الخفجي، وخليجيًا يُصنّف بأنه ثاني أفضل الشواطئ بطول ساحل الخليج العربي.',
+      'يُمكنك الاستمتاع بالسباحة وصيد الأسماك مع إقامة حفلات الشواء على الشاطئ، ',
+      'كما يُمكن لأطفالك الاستمتاع بمناطق الألعاب الخاصة بهم',
+      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+    ],
+    isTrending: true,
+    isBeach: true,
+    isActivities: true,
+    isResturant: false,
+    isHotel: false,
+  ),
+  Places(
+    id: 'm15',
+    categories: [
+      'c6',
+    ],
+    title: 'حديقة الدانة',
+    imageUrl:
+        'https://www.travellwd.com/wp-content/uploads/2021/02/%D8%AD%D8%AF%D9%8A%D9%82%D8%A9-%D8%A7%D9%84%D8%AF%D8%A7%D9%86%D8%A9-%D9%81%D9%8A-%D8%B1%D8%A3%D8%B3-%D8%A7%D9%84%D8%AA%D9%86%D9%88%D8%B1%D8%A9.jpg',
+    activities: [
+      'زيارة المنتزه الترفيهي',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    placeType: PlaceType.CityDown,
     mapUrl: '',
     description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      'حديقة الدانة من أكبر المنتزهات الترفيهية الهامة في مدينة رأس تنورة بالمملكة العربية السعودية.',
+      'تتمتع الحديقة بالمناظر الطبيعية الجميلة، حيث المسطحات الخضراء الكبيرة الواسعة والأشجار الكثيفة.',
+      'تُعد المُتنفس الطبيعي المُفضل للعائلة السعودية في رأس تنورة.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
     isTrending: false,
     isBeach: true,
@@ -577,16 +548,45 @@ const PlaceType_data = const [
     isHotel: false,
   ),
   Places(
-    id: 'm17',
+    id: 'm16',
     categories: [
       'c6',
-      'c2',
     ],
-    title: 'القفز المظلي',
+    title: 'شاطئ رأس تنورة',
     imageUrl:
-        'https://images.unsplash.com/photo-1601024445121-e5b82f020549?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBhcmFjaHV0ZSUyMGp1bXBpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
-    placeType: PlaceType.Adventures,
-    mapUrl: '',
+        'https://www.travellwd.com/wp-content/uploads/2021/02/%D8%B4%D8%A7%D8%B7%D8%A6-%D8%B1%D8%A3%D8%B3-%D8%AA%D9%86%D9%88%D8%B1%D8%A9.bmp',
+    activities: [
+      'شاطئ برماله الذهبية الناعمة',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية',
+      'لإستلقاء على للتشمس أو التأمل وممارسة جميع الرياضات الترفيهية مثل الكرة الشاطئية وغيرها.'
+    ],
+    placeType: PlaceType.Activities,
+    mapUrl: 'https://goo.gl/maps/dd6d39qRxg7TEKwC9',
+    description: [
+      'يُعتبر شاطئ رأس تنورة من أجمل الوجهات السياحية في المدينة بالمملكة العربية السعودية',
+      'ويلقي إقبالًا من قِبل الكثير من الزوار من داخل مدينة رأس تنورة وكذلك ومن خارجها على حد سواء. يتميز الشاطئ برماله الذهبية الناعمة، حيث يُمكنك الإستلقاء عليها للتشمس أو التأمل وممارسة جميع الرياضات الترفيهية مثل الكرة الشاطئية وغيرها. هذا فضلًا عن مياهه الفيروزية النظيفة والهادئة، حيث يُمكنك الإستمتاع بالسباحة فيها بأمان سواء للصغار أو الكبار',
+      'بالإضافة إلى ذلك يضم الشاطئ كافة الوسائل والمرافق الخدمية التي يحتاجها المصطافين، على سبيل المثال دورات المياة، وأماكن الجلوس ذات المظلات وغيرها. أيضًا يُحاط به المسطحات الخضراء الجميلة، التي تُتيح لك قضاء وقت هادئ وسط أجواء طبيعية جميلة.',
+      'ينتشر بإمتداد الشاطئ الذي يبلغ طوله نحو 5 كيلو متر تقريبًا، مجموعة من أكشاك بيع الوجبات السريعة، والمرطبات والعصائر المُنعشة. فإن كُنت تنوي السياحة في مدينة رأس تنورة صيفًا، ننصحك بزيارة هذا الشاطئ الهادئ.',
+    ],
+    isTrending: true,
+    isBeach: true,
+    isActivities: true,
+    isResturant: true,
+    isHotel: false,
+  ),
+  Places(
+    id: 'm17',
+    categories: [
+      'c7',
+    ],
+    title: 'حديقة بودل الترفيهية',
+    imageUrl:
+        'https://www.urtrips.com/wp-content/uploads/2018/12/boudl-land.jpg',
+    placeType: PlaceType.GardenPark,
+    mapUrl: 'https://goo.gl/maps/dnbmwGjSJc94k3Ak9',
     activities: [
       'زيارة المواقع الأثرية',
       'جولة سياحية على الأقدام',
@@ -595,13 +595,42 @@ const PlaceType_data = const [
       'استمتاع المناظر الجملية'
     ],
     description: [
-      'أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'يسكينج أليايت سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
-      'لوريم ايبسوم دولار ات دولار ماجنا أليكيوا.',
-      'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+      'مدينة بودل الترفيهية من اهم الاماكن السياحيه في حفر الباطن السعودية حيث أنها تُعتبر مُتنفس للعائلة بالكامل',
+      'كونها تضم العديد من المرافق التي تُوفر قضاء وقتاً مُمتعاً بالنسبة لهم بين الألعاب الترفيهية والمسطحات الخضراء',
+      'كما أن الحديقة تُقيم العديد من الاحتفالات والمسابقات المُميزة.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
     ],
     isTrending: false,
-    isBeach: true,
+    isBeach: false,
+    isActivities: true,
+    isResturant: false,
+    isHotel: false,
+  ),
+   Places(
+    id: 'm18',
+    categories: [
+      'c7',
+    ],
+    title: 'حديقة أبو موسى الأشعري',
+    imageUrl:
+        'https://www.google.com/maps/place/Abu+Musa+Park/@28.4467361,45.9842188,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPxwalqVa_903nLYsxpwCdA-qrpECanHbUQ7jCy!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPxwalqVa_903nLYsxpwCdA-qrpECanHbUQ7jCy%3Dw114-h86-k-no!7i4640!8i3472!4m5!3m4!1s0x3fd7472ea5b97829:0x89d760584184ab10!8m2!3d28.4467361!4d45.9842188#',
+    placeType: PlaceType.GardenPark,
+    mapUrl: 'https://goo.gl/maps/YNaHPZ5mY7JLVbcD7',
+    activities: [
+      'زيارة المواقع الأثرية',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    description: [
+      'مدينة بودل الترفيهية من اهم الاماكن السياحيه في حفر الباطن السعودية حيث أنها تُعتبر مُتنفس للعائلة بالكامل',
+      'كونها تضم العديد من المرافق التي تُوفر قضاء وقتاً مُمتعاً بالنسبة لهم بين الألعاب الترفيهية والمسطحات الخضراء',
+      'كما أن الحديقة تُقيم العديد من الاحتفالات والمسابقات المُميزة.',
+      // 'لور دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.',
+    ],
+    isTrending: false,
+    isBeach: false,
     isActivities: true,
     isResturant: false,
     isHotel: false,

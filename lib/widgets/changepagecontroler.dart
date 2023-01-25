@@ -28,6 +28,7 @@ class ChangePageControllerImpl extends ChangePageController{
       HomePage(),
       Discover(),
       Plan(),
+      // ignore: prefer_const_constructors
       Favoraite(id: '11',title: 'k',imageUrl: 'uio',),
       Account(),
     ];

@@ -1,5 +1,5 @@
 
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, unnecessary_import, implementation_imports, unused_import, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -23,7 +23,7 @@ class ChangePage extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         
         color: Colors.white,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -39,7 +39,7 @@ class ChangePage extends StatelessWidget {
                       onPressed:(){
                         controller.chngepage(0);
                       },
-                      child: Icon(Icons.home,color: controller.currentpage==0 ? Color.fromARGB(255, 13, 9, 65) : Colors.grey ,size: width/17,),
+                      child: Icon(Icons.home,color: controller.currentpage==0 ? const Color.fromARGB(255, 13, 9, 65) : Colors.grey ,size: width/17,),
                     ),
         
         
@@ -47,7 +47,7 @@ class ChangePage extends StatelessWidget {
                     MaterialButton(
                       minWidth: width/5,
                       onPressed:(){controller.chngepage(1);},
-                      child: Icon(Icons.explore_outlined,color: controller.currentpage==1 ? Color.fromARGB(255, 13, 9, 65): Colors.grey ,size: width/17),
+                      child: Icon(Icons.explore_outlined,color: controller.currentpage==1 ? const Color.fromARGB(255, 13, 9, 65): Colors.grey ,size: width/17),
                     ),
                     
         
@@ -60,7 +60,7 @@ class ChangePage extends StatelessWidget {
                         
                         controller.chngepage(2);
                       },
-                      child: Icon(Icons.calendar_month_rounded,color: controller.currentpage==2 ? Color.fromARGB(255, 13, 9, 65) : Colors.grey,size: width/17),
+                      child: Icon(Icons.calendar_month_rounded,color: controller.currentpage==2 ? const Color.fromARGB(255, 13, 9, 65) : Colors.grey,size: width/17),
                     ),
         
                     MaterialButton(
@@ -68,7 +68,7 @@ class ChangePage extends StatelessWidget {
                       onPressed:(){
                         controller.chngepage(3);
                       },
-                      child: Icon(Icons.favorite_border_rounded,color: controller.currentpage==3 ?Color.fromARGB(255, 13, 9, 65) : Colors.grey ,size: width/17),
+                      child: Icon(Icons.favorite_border_rounded,color: controller.currentpage==3 ?const Color.fromARGB(255, 13, 9, 65) : Colors.grey ,size: width/17),
                     ),
         
                     MaterialButton(
@@ -76,7 +76,7 @@ class ChangePage extends StatelessWidget {
                       onPressed:(){
                         controller.chngepage(4);
                       },
-                      child: Icon(Icons.person,color: controller.currentpage==4 ? Color.fromARGB(255, 13, 9, 65) : Colors.grey ,size: width/17),
+                      child: Icon(Icons.person,color: controller.currentpage==4 ? const Color.fromARGB(255, 13, 9, 65) : Colors.grey ,size: width/17),
                     ),
         
                     

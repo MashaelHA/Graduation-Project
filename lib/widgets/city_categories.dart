@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, sort_child_properties_last
+// ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, sort_child_properties_last, unused_import
 
 import 'package:flutter/material.dart';
 import '../Screens/places/places_screens.dart';
@@ -60,13 +60,13 @@ class CityCategories extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     alignment: Alignment.center,
                     height: 200,
                     width: double.infinity,
                     child: Text(
                       title,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 30,
                         color: Colors.white,
                         fontFamily: 'Fontspring-DEMO-biotif',

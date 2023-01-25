@@ -5,7 +5,7 @@ import 'constants.dart';
 // ignore: unused_import
 import 'package:flutter_localizations/flutter_localizations.dart';
 // import './Screens/signup_screen.dart';
-import 'Screens/places/places_screens.dart';
+// import 'Screens/places/places_screens.dart';
 
 void main() => runApp(MyApp());
 

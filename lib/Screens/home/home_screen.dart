@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_import, implementation_imports, unused_import, use_key_in_widget_constructors, override_on_non_overriding_member, annotate_overrides, prefer_const_constructors
+// ignore_for_file: unnecessary_import, implementation_imports, unused_import, use_key_in_widget_constructors, override_on_non_overriding_member, annotate_overrides, prefer_const_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -41,6 +41,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[150],
       body: SingleChildScrollView(
+        // ignore: avoid_unnecessary_containers
         child: Container(
           // padding: EdgeInsets.only(right: 10, top: 18),
           child: Column(
@@ -106,7 +107,7 @@ class _HomePageState extends State<HomePage> {
 
               Column(
                 children: [
-                  Container(
+                  SizedBox(
                     //color: Colors.red,
                     height: 230,
                     width: 600,
@@ -132,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
 
-              Container(
+              SizedBox(
                 height: height / 22,
                 width: double.infinity,
                 child: ListView.separated(
@@ -159,6 +160,7 @@ class _HomePageState extends State<HomePage> {
                                 7.0) //                 <--- border radius here
                             ),
                       ),
+                      // ignore: avoid_unnecessary_containers
                       child: Container(
                         child: InkWell(
                           onTap: () {
@@ -190,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
 
-              Container(
+              SizedBox(
                 height: height / 4.2,
                 width: double.infinity,
                 child: ListView.separated(
@@ -204,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return SingleChildScrollView(
-                      child: Container(
+                      child: SizedBox(
                         width: width / 1.7,
                         child: Card(
                           shape: RoundedRectangleBorder(
@@ -229,7 +231,7 @@ class _HomePageState extends State<HomePage> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(15.0),
                                     child: Image.asset(
-                                      "assets/images/" + photoitems[index],
+                                      "assets/images/${photoitems[index]}",
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -283,7 +285,7 @@ class _HomePageState extends State<HomePage> {
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.end,
-                                        children: [
+                                        children: const [
                                           Icon(
                                             Icons.location_on,
                                             color: SecondaryYellow,
@@ -307,7 +309,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
+                                    children: const [
                                       Icon(
                                         Icons.star,
                                         color: SecondaryPink,

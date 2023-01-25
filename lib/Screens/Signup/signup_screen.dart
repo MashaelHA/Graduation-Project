@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, use_key_in_widget_constructors
+// ignore_for_file: avoid_unnecessary_containers, use_key_in_widget_constructors, unused_import
 
 import 'package:flutter/material.dart';
 // import 'package:flutter/src/widgets/container.dart';
@@ -14,6 +14,7 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    // ignore: unused_local_variable
     double width = MediaQuery.of(context).size.width;
     Size? size = MediaQuery.of(context).size;
 

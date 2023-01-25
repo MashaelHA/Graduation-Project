@@ -16,7 +16,7 @@ class Cateegories extends StatelessWidget {
           Header(),
           Center(
             child: Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 50,
                 left: 200,
               ),

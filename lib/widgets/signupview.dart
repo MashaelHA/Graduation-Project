@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, unused_local_variable, avoid_unnecessary_containers, non_constant_identifier_names, sized_box_for_whitespace
+// ignore_for_file: use_key_in_widget_constructors, unused_local_variable, avoid_unnecessary_containers, non_constant_identifier_names, sized_box_for_whitespace, unused_import
 
 import 'package:flutter/material.dart';
 
@@ -108,14 +108,14 @@ class _SignUpViewState extends State<SignUpView> {
               fillColor: kPrimaryLightColor,//Colors.white,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
-                  borderSide: BorderSide(color: Colors.grey)),
+                  borderSide: const BorderSide(color: Colors.grey)),
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
-                  borderSide: BorderSide(color: Colors.grey)),
+                  borderSide: const BorderSide(color: Colors.grey)),
               
               hintText: Title,
               hintStyle:
-                  TextStyle(color: Color(0xff8c9289), fontFamily: 'Fontspring-DEMO-biotif'),
+                  const TextStyle(color: Color(0xff8c9289), fontFamily: 'Fontspring-DEMO-biotif'),
             ),
           ),
         ),
@@ -127,16 +127,17 @@ class _SignUpViewState extends State<SignUpView> {
     String title,
   ) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: ElevatedButton(
           onPressed: () {
             //  loginUser();
             Navigator.push(context,
                       MaterialPageRoute(builder: (context) => SurveyPage()));
           },
+          // ignore: sort_child_properties_last
           child: Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 25,
               color: kPrimaryLightColor, // Colors.white,
             ),
