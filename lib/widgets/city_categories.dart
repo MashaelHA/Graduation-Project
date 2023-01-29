@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../Screens/places/places_screens.dart';
-import '../constants.dart';
+import '../utils/constants.dart';
 
 class CityCategories extends StatelessWidget {
   final String id;

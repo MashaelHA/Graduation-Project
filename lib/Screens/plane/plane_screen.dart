@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 
 import '../home/components/header.dart';
-import '../../constants.dart';
+import '../../utils/constants.dart';
 
 class Plan extends StatelessWidget {
   // const Plan({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../app_data.dart';
+import '../../../data/app_data.dart';
 import '../../../widgets/survey_item.dart';
 import '../../home/components/tab.dart';
 import '../../home/components/header.dart';

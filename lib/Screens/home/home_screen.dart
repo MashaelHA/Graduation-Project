@@ -5,9 +5,10 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import '../../constants.dart';
+import '../../utils/constants.dart';
 import '../../widgets/photoviewer.dart';
 import 'components/header.dart';
+import '../../data/app_data.dart';
 
 class HomePage extends StatefulWidget {
   // const HomePage({super.key});
@@ -47,34 +48,6 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               Header(),
-              // Row(
-              //   children: [
-              //     Container(
-              //         alignment: Alignment.centerRight,
-              //         child: Icon(
-              //           Icons.search,
-              //           size: 30,
-              //         )),
-              //     SizedBox(
-              //       width: width / 2,
-              //     ),
-              //     SizedBox(
-              //       width: 10,
-              //     ),
-              //     Text(
-              //       'مرحبا , محمد',
-              //       style: TextStyle(
-              //           color: Colors.red,
-              //           fontSize: 17), //Theme.of(context).textTheme.titleSmall,
-              //     ),
-              //     Icon(
-              //       Icons.person,
-              //       color: Colors.red,
-              //       size: 40,
-              //     ),
-              //   ],
-              // ),
-              //SizedBox(height: height/40,),
               Container(
                   padding: EdgeInsets.symmetric(horizontal: 15),
                   alignment: Alignment.centerRight,

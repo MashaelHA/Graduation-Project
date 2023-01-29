@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import '../../widgets/place_item.dart';
 import '../../models/survey.dart';
-import '../../app_data.dart';
+import '../../data/app_data.dart';
+import '../../utils/constants.dart';
 
 class CategoryPlaces extends StatelessWidget {
   // const CategoryPlaces({Key? key}) : super(key: key);
@@ -26,6 +27,7 @@ class CategoryPlaces extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryTitle),
+        backgroundColor: kPrimaryColor.withOpacity(0.5),
       ),
       body: Center(
         child: ListView.builder(
@@ -34,7 +36,7 @@ class CategoryPlaces extends StatelessWidget {
             return PlaceItem(
               id: filterdPlaces[index].id,
               title: filterdPlaces[index].title,
-              imageUrl: filterdPlaces[index].imageUrl,
+              imageUrl: filterdPlaces[index].imageUrlPlace,
               placeType: filterdPlaces[index].placeType,
             );
           },

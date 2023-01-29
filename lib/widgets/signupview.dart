@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../utils/constants.dart';
 import '../Screens/Signup/components/survey.dart';
 import '../Screens/Welcome/welcome_screen.dart';
 import '../Screens/Welcome/components/background.dart';

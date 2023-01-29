@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
+import '../../../utils/constants.dart';
 import '../../../widgets/signupview.dart';
 import 'background.dart';
 import '../../Signup/signup_screen.dart';

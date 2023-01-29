@@ -1,10 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors, unused_import
 
 import 'package:flutter/material.dart';
-import '../../../constants.dart';
+import '../../../utils/constants.dart';
 import '../../../models/survey.dart';
 
-import '../../../app_data.dart';
+import '../../../data/app_data.dart';
 // import '../../../models/survey.dart';
 // import '../../../widgets/survey_item.dart';
 import '../../../widgets/survey_item.dart';

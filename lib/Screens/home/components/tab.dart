@@ -6,8 +6,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import '../../../widgets/changepagecontroler.dart';
-import '../../../constants.dart';
+import '../../../controller/changepagecontroler.dart';
+import '../../../utils/constants.dart';
 
 class ChangePage extends StatelessWidget {
   // const ChangePage({super.key});

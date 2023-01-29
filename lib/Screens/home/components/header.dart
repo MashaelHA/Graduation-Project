@@ -18,18 +18,18 @@ class _HeaderState extends State<Header> {
       padding: const EdgeInsets.only(right: 10, top: 18),
       child: Row(
         children: [
-          Container(
-            alignment: Alignment.centerRight,
-            child: const Icon(
-              Icons.search,
-              size: 30,
-            ),
-          ),
+          // Container(
+          //   alignment: Alignment.centerRight,
+          //   child: const Icon(
+          //     Icons.search,
+          //     size: 30,
+          //   ),
+          // ),
           SizedBox(
             width: width / 2,
           ),
           const SizedBox(
-            width: 10,
+            width: 30,
           ),
           const Text(
             'مرحبا , محمد',

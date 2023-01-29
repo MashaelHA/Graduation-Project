@@ -1,7 +1,7 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'Screens/Welcome/welcome_screen.dart';
-import 'constants.dart';
+import 'utils/constants.dart';
 // ignore: unused_import
 import 'package:flutter_localizations/flutter_localizations.dart';
 // import './Screens/signup_screen.dart';

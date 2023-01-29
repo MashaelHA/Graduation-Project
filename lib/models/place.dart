@@ -1,4 +1,3 @@
-
 // ignore_for_file: constant_identifier_names
 
 enum PlaceType {
@@ -15,11 +14,13 @@ enum PlaceType {
 class Places {
   final String id;
   final List<String> categories;
+  final String cityName;
   final String title;
-  final String imageUrl;
+  final String imageUrlPlace;
   final List<String> activities;
   final List<String> description;
   final String mapUrl;
+  final String evaluation;
   final PlaceType placeType;
   final bool isTrending;
   final bool isBeach;
@@ -30,11 +31,13 @@ class Places {
   const Places({
     required this.id,
     required this.categories,
+    required this.cityName,
     required this.title,
-    required this.imageUrl,
+    required this.imageUrlPlace,
     required this.activities,
     required this.description,
     required this.mapUrl,
+    required this.evaluation,
     required this.placeType,
     required this.isTrending,
     required this.isBeach,

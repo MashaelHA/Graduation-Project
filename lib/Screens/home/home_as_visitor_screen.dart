@@ -5,7 +5,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import '../../constants.dart';
+import '../../utils/constants.dart';
 import '../../widgets/photoviewer.dart';
 import 'components/header.dart';
 

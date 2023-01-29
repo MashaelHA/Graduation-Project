@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../home/components/header.dart';
-import '../../constants.dart';
+import '../../utils/constants.dart';
 import '../Welcome/welcome_screen.dart';
 
 class FavoraiteVistor extends StatelessWidget {
