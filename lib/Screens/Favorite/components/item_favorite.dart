@@ -26,46 +26,11 @@ class ItemsFavorite extends StatefulWidget {
 }
 
 class _ItemsFavoriteState extends State<ItemsFavorite> {
-//   List<Category> Cateegories_data = [
-//    Category(
-//     id: 'c1',
-//     title: 'الأنشطة',
-//     imageUrl:
-//         'https://www.ootlah.com/wp-content/uploads/2022/08/2-halfmoon_0007_WhatsApp-Image-2022-04-29-at-4.06.28-PM-1.jpg',
-//   ),
-//    Category(
-//     id: 'c2',
-//     title: 'المغامرات',
-//     imageUrl:
-//         'https://cnn-arabic-images.cnn.io/cloudinary/image/upload/w_1920,c_scale,q_auto/cnnarabic/2019/03/12/images/123513.jpg',
-//   ),
-//    Category(
-//     id: 'c3',
-//     title: 'تأمل الطبيعة',
-//     imageUrl:
-//         'http://www.asdaa-okazz.com/uploads/original_images/c0407cO_O20a1d556-c1a3-498c-b888-a13228e6e7bc.jpeg',
-//   ),
-//    Category(
-//     id: 'c4',
-//     title: 'التجول في المدن',
-//     imageUrl: 'https://www.cruisemapper.com/images/ports/10144-bc7d0d8647.jpg',
-//   ),
-//  Category(
-//     id: 'c5',
-//     title: 'التخييم',
-//     imageUrl:
-//         'https://img.rezdy.com/PRODUCT_IMAGE/13699/emptyquarter_gallery_11_lg.jpg',
-//   ),
-//  Category(
-//     id: 'c6',
-//     title: 'التنزه في الحدائق',
-//     imageUrl:
-//         'https://www.trfihi-parks.com/images/parks/LjLa8D_1537844822_1.jpg',
-//   ),
-// ];
-
   @override
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names
+    final SelectedPlacesFavorate = Cateegories_data.firstWhere((place) => place.id == place.id);
+
     // final filterdFavorite = Cateegories_data.where((cat) {
     //   return cat.id.contains('other');
     // }).toList();
@@ -86,16 +51,20 @@ class _ItemsFavoriteState extends State<ItemsFavorite> {
                   elevation: 5,
                   child: Container(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
-                            "https://www.ootlah.com/wp-content/uploads/2022/08/2-halfmoon_0007_WhatsApp-Image-2022-04-29-at-4.06.28-PM-1.jpg"),
+                          SelectedPlacesFavorate.imageUrl,
+                            ),
                         fit: BoxFit.cover,
                         alignment: Alignment.topCenter,
                       ),
                     ),
                     child: ListTile(
-                      title: const Text('jj'),
+                      title: Text(
+                        SelectedPlacesFavorate.title,
+                        style: Theme.of(context).textTheme.bodyText1,
+                        ),
                       trailing: const Icon(
                         Icons.arrow_forward_ios,
                         color: kPrimaryLightColor,

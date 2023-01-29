@@ -7,7 +7,7 @@ import '../../utils/app_export.dart';
 import '../../utils/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PlacesDetails extends StatelessWidget {
+class PlacesDetails extends StatefulWidget {
   // const PlacesDetails({Key? key}) : super(key: key);
 
   final String id;
@@ -23,15 +23,21 @@ class PlacesDetails extends StatelessWidget {
   });
 
   @override
+  State<PlacesDetails> createState() => _PlacesDetailsState();
+}
+
+class _PlacesDetailsState extends State<PlacesDetails> {
+  @override
   Widget build(BuildContext context) {
-    final SelectedPlaces = PlaceType_data.firstWhere((place) => place.id == id);
+    // ignore: non_constant_identifier_names
+    final SelectedPlaces = PlaceType_data.firstWhere((place) => place.id == widget.id);
 
     return Scaffold(
       appBar: AppBar(
         title: Row(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(title)
+            Text(widget.title)
             ],
             ),
             backgroundColor: kPrimaryColor.withOpacity(0.5),
@@ -242,6 +248,7 @@ class PlacesDetails extends StatelessWidget {
                                     Padding(
                                       padding: getPadding(top: 3, right: 5),
                                       child: IconButton(
+                            // ignore: deprecated_member_use
                             onPressed: () => launch(SelectedPlaces.mapUrl),
                             icon: 
                                const Icon(
@@ -257,8 +264,8 @@ class PlacesDetails extends StatelessWidget {
                                     //   color: Colors.yellow, //SecondaryYellow,
                                     //   size: 30,
                                     // ),
-                                    const Text(
-                                      'الخريطة',
+                                    Text(
+                                      SelectedPlaces.cityName,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
                                     ),
@@ -286,7 +293,7 @@ class PlacesDetails extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: getHorizontalSize(
                       322.00,
                     ),

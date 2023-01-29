@@ -9,16 +9,32 @@ import '../../utils/constants.dart';
 import '../../widgets/photoviewer.dart';
 import 'components/header.dart';
 import '../../data/app_data.dart';
+import '../../models/place.dart';
 
 class HomePage extends StatefulWidget {
   // const HomePage({super.key});
   bool isFavorite = true;
+
+  final String id;
+  final String nameCity;
+  final String titlePlace;
+  final String imageUrlPlace;
+  final String evaluation;
+
+  HomePage({
+    required this.id,
+    required this.nameCity,
+    required this.titlePlace,
+    required this.imageUrlPlace,
+    required this.evaluation,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+
   String title = "";
   List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم"];
   List<Icon> iconsitem = [
@@ -39,6 +55,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
+     // ignore: non_constant_identifier_names
+     final SelectedPlaces = PlaceType_data.firstWhere((place) => place.id == place.id);
+
+    //  final filterdPlaces = PlaceType_data.where((place) {
+    //   return place.categories.contains(place.id);
+    // }).toList();
+
     return Scaffold(
       backgroundColor: Colors.grey[150],
       body: SingleChildScrollView(
@@ -203,8 +227,9 @@ class _HomePageState extends State<HomePage> {
                                   width: double.infinity,
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(15.0),
-                                    child: Image.asset(
-                                      "assets/images/${photoitems[index]}",
+                                    child: Image.network( //.asset(
+                                      //"assets/images/${photoitems[index]}",
+                                      SelectedPlaces.imageUrlPlace,
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -250,7 +275,8 @@ class _HomePageState extends State<HomePage> {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Text(
-                                        "شتوية فاردو",
+                                        SelectedPlaces.title,
+                                        // "شتوية فاردو",
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline3,
@@ -258,13 +284,14 @@ class _HomePageState extends State<HomePage> {
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.end,
-                                        children: const [
+                                        children: [
                                           Icon(
                                             Icons.location_on,
                                             color: SecondaryYellow,
                                           ),
                                           Text(
-                                            "الخبر الشبيلي",
+                                            SelectedPlaces.cityName,
+                                            // "الخبر الشبيلي",
                                             style: TextStyle(
                                               color: SecondaryBlue,
                                               fontSize: 12,
@@ -282,13 +309,14 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
-                                    children: const [
+                                    children: [
                                       Icon(
-                                        Icons.star,
+                                        Icons.star_border_purple500_rounded,
                                         color: SecondaryPink,
                                       ),
                                       Text(
-                                        "4.8",
+                                        SelectedPlaces.evaluation,
+                                        // "4.8",
                                         style: TextStyle(
                                           color: kPrimaryColor,
                                         ),

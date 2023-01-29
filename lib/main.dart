@@ -4,13 +4,50 @@ import 'Screens/Welcome/welcome_screen.dart';
 import 'utils/constants.dart';
 // ignore: unused_import
 import 'package:flutter_localizations/flutter_localizations.dart';
+// import './models/place.dart';
+// import './data/app_data.dart';
 // import './Screens/signup_screen.dart';
 // import 'Screens/places/places_screens.dart';
 
 void main() => runApp(MyApp());
 
 // ignore: use_key_in_widget_constructors
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  // Map<String, bool> _filters = {
+  //   'turinding': true,
+  //   'beach': false,
+  //   'activity': false,
+  //   'resturant': false,
+  // };
+  // void _chaneFilters(Map<String, bool> filterData){
+
+  // }
+
+  // List<Places> _favoritePlaces = [];
+
+  // void _toggleFavorit(String id) {
+  //   final existingIndex =
+  //       _favoritePlaces.indexWhere((place) => place.id == id);
+  //   if (existingIndex >= 0) {
+  //     setState() {
+  //       _favoritePlaces.removeAt(existingIndex);
+  //     }
+  //   } else {
+  //     setState() {
+  //       _favoritePlaces.add(PlaceType_data.firstWhere((meal) => meal.id == id));
+  //     }
+  //   }
+  // }
+
+  // bool _isPlaceFavorite(String id) {
+  //   return _favoritePlaces.any((meal) => meal.id == id);
+  // }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -30,70 +67,63 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           fontFamily: 'Fontspring-DEMO-biotif',
           textTheme: ThemeData.light().textTheme.copyWith(
-                headline5: const TextStyle(
-                  // color: kPrimaryLightColor,
-                  fontSize: 20,
-                  fontFamily: 'Fontspring-DEMO-biotif',
-                  fontWeight: FontWeight.bold,
-                ),
-                headline6: const TextStyle(
-                  color: SecondaryBlue,
-                  fontSize: 20,
-                  fontFamily: 'Fontspring-DEMO-biotif',
-                  fontWeight: FontWeight.bold,
-                ),
-                headline4: const TextStyle(
-                  color: SecondaryGreen,
-                  fontSize: 20,
-                  fontFamily: 'Fontspring-DEMO-biotif',
-                  fontWeight: FontWeight.bold,
-                ),
-                headline3: const TextStyle(
-                  color: kPrimaryColor,
-                  fontSize: 20,
-                  fontFamily: 'Fontspring-DEMO-biotif',
-                  fontWeight: FontWeight.w500,
-                ),
-                headline2: const TextStyle(
+              headline6: const TextStyle(
+                color: SecondaryBlue,
+                fontSize: 20,
+                fontFamily: 'Fontspring-DEMO-biotif',
+                fontWeight: FontWeight.bold,
+              ),
+              headline5: const TextStyle(
+                // color: kPrimaryLightColor,
+                fontSize: 20,
+                fontFamily: 'Fontspring-DEMO-biotif',
+                fontWeight: FontWeight.bold,
+              ),
+              headline4: const TextStyle(
+                color: SecondaryGreen,
+                fontSize: 20,
+                fontFamily: 'Fontspring-DEMO-biotif',
+                fontWeight: FontWeight.bold,
+              ),
+              headline3: const TextStyle(
+                color: kPrimaryColor,
+                fontSize: 20,
+                fontFamily: 'Fontspring-DEMO-biotif',
+                fontWeight: FontWeight.w500,
+              ),
+              headline2: const TextStyle(
+                color: kTittileColor,
+                fontSize: 20,
+                fontFamily: 'Fontspring-DEMO-biotif',
+                fontWeight: FontWeight.w200,
+              ),
+              headline1: const TextStyle(
+                color: kPrimaryColor,
+                fontSize: 20,
+                fontFamily: 'Fontspring-DEMO-biotif',
+                fontWeight: FontWeight.w200,
+              ),
+              headlineLarge: const TextStyle(
+                color: kTittileColor,
+                fontFamily: 'Fontspring-DEMO-biotif',
+                fontSize: 24,
+              ),
+              subtitle1: const TextStyle(
                   color: kTittileColor,
-                  fontSize: 20,
-                  fontFamily: 'Fontspring-DEMO-biotif',
-                  fontWeight: FontWeight.w200,
-                ),
-                headline1: const TextStyle(
-                  color: kPrimaryColor,
-                  fontSize: 20,
-                  fontFamily: 'Fontspring-DEMO-biotif',
-                  fontWeight: FontWeight.w200,
-                ),
-                headlineLarge: const TextStyle(
-                  color: kTittileColor,
-                  fontFamily: 'Fontspring-DEMO-biotif',
-                  fontSize: 24,
-                ),
-                subtitle1: const TextStyle(
-                  color: kTittileColor,
                   fontFamily: 'Fontspring-DEMO-biotif',
                   fontSize: 20,
-                  fontWeight: FontWeight.w200
-                ),
-                subtitle2: const TextStyle(
+                  fontWeight: FontWeight.w200),
+              subtitle2: const TextStyle(
                   color: kPrimaryLightColor,
                   fontFamily: 'Fontspring-DEMO-biotif',
                   fontSize: 24,
-                  fontWeight: FontWeight.w900
-                ),
-                // titleMedium: const TextStyle(
-                //   fontFamily: 'Fontspring-DEMO-biotif',
-                //   fontWeight: FontWeight.bold,
-                // ),
-                // titleSmall: const TextStyle(
-                //   color: Colors.red,
-                //   fontSize: 17,
-                //   fontFamily: 'Fontspring-DEMO-biotif',
-                //   fontWeight: FontWeight.normal,
-                // ),
-              ),
+                  fontWeight: FontWeight.w900),
+              bodyText1: const TextStyle(
+                color: kPrimaryLightColor,
+                fontFamily: 'Fontspring-DEMO-biotif',
+                fontSize: 20,
+                // fontWeight: FontWeight.normal,
+              )),
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
               elevation: 0,

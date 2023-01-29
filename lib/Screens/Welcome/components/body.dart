@@ -10,7 +10,7 @@ import '../../../widgets/signupview.dart';
 import 'background.dart';
 import '../../Signup/signup_screen.dart';
 import '../../home/components/tab.dart';
-import '../../home/home_as_visitor_screen.dart';
+// import '../../home/home_as_visitor_screen.dart';
 
 // ignore: use_key_in_widget_constructors
 class Body extends StatelessWidget {
@@ -161,10 +161,10 @@ class Body extends StatelessWidget {
               width: 150,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => HomePageVisitor(),
-                      ),)
-                      ;
+                  // Navigator.push(
+                  //     context, MaterialPageRoute(builder: (context) => HomePageVisitor(),
+                  //     ),)
+                  //     ;
                 },
                 child: Text(
                   'الدخول كزائر',

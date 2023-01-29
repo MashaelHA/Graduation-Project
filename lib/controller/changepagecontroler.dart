@@ -25,7 +25,7 @@ class ChangePageControllerImpl extends ChangePageController{
   
     int currentpage=0;
     List <Widget> listpage = [
-      HomePage(),
+      HomePage(id: 'id', nameCity: 'nameCity', titlePlace: 'titlePlace', imageUrlPlace: 'imageUrlPlace', evaluation: 'evaluation'),
       Discover(),
       Plan(),
       // ignore: prefer_const_constructors

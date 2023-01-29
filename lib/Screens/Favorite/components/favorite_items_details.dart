@@ -14,7 +14,7 @@ class FavoriteItemsDetalis extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         // ignore: prefer_const_constructors
-        title: Text('k'),
+        title: Text(''),
       ),
       // ignore: avoid_unnecessary_containers
       body: Container(
