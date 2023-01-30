@@ -1185,4 +1185,176 @@ const PlaceType_data = const [
     isResturant: true,
     isHotel: false,
     ),
+
+
+
+    Places(
+    id: 'm39',
+    categories: [
+      'c5',
+    ],
+    cityName: 'الخفجي',
+    title: 'LINES | لاينز',
+    imageUrlPlace:
+        'https://f.top4top.io/p_25854wrkf1.jpg',
+    activities: [
+      'زيارة المواقع الأثرية',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    placeType: PlaceType.CityDown,
+    mapUrl: 'https://maps.app.goo.gl/BfcAHbeBefsnssZRA?g_st=ig',
+    evaluation: '3.5',
+    description: [
+      'يقع لاينز كافيه في شارع الملك عبدالله بمدينة الخفجي ، وهو مكان ترفيهي للشباب والعوائل. يوجد به صالة بولينغ ويقدم القهوة المختصة وبعض اصناف الحلويات اللذيذة.',
+    ],
+    isTrending: false,
+    isBeach: false,
+    isActivities: true,
+    isResturant: true,
+    isHotel: false,
+  ),
+  Places(
+    id: 'm40',
+    categories: [
+      'c5',
+    ],
+    cityName: 'الخفجي',
+    title: 'مطعم حكاية لبنانية',
+    imageUrlPlace:
+        'https://l.top4top.io/p_2585ri8b91.jpg',
+    activities: [
+      'زيارة المواقع الأثرية',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    placeType: PlaceType.CityDown,
+    mapUrl: 'https://maps.app.goo.gl/qrsgoczeGVrJsZHe6?g_st=ic',
+    evaluation: '3.5',
+    description: [
+      'يقع مطعم حكاية لبنانية في طريق الأمير نايف في حي الجوهرة بمدينة الخفجي ، يقدم وجبة فطور ووجبة غداء ووجبة عشاء ، يتميز مطعم حكاية لبنانية بالطابع اللبناني وتقديمه المأكولات اللبنانية.',
+    ],
+    isTrending: false,
+    isBeach: false,
+    isActivities: false,
+    isResturant: true,
+    isHotel: false,
+  ),
+  Places(
+    id: 'm41',
+    categories: [
+      'c5',
+    ],
+    cityName: 'الخفجي',
+    title: 'قروف سنتر',
+    imageUrlPlace:
+        'https://i.top4top.io/p_2585hzb071.jpg',
+    activities: [
+      'زيارة المواقع الأثرية',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    placeType: PlaceType.CityDown,
+    mapUrl: 'https://maps.app.goo.gl/Hd34DwXCtj1W3iCx5?g_st=ic',
+    evaluation: '4.0',
+    description: [
+      'يقع قروف سنتر في شارع الملك عبدالله بن عبد العزيز بحي الريان في مدينة الخفجي ، وهو عباره عن مجمع للمطاعم والمقاهي ومحلات للعطور . يوجد به مواقف للسيارات',
+    ],
+    isTrending: true,
+    isBeach: false,
+    isActivities: false,
+    isResturant: true,
+    isHotel: false,
+  ),
+  Places(
+    id: 'm42',
+    categories: [
+      'c5',
+    ],
+    cityName: 'الخفجي',
+    title: 'حصير',
+    imageUrlPlace:
+        'https://i.top4top.io/p_2585ucmeb1.jpg',
+    activities: [
+      'زيارة المواقع الأثرية',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    placeType: PlaceType.CityDown,
+    mapUrl: 'https://maps.app.goo.gl/AWDvAwiFhARim8EY8?g_st=ic',
+    evaluation: '4.5',
+    description: [
+      'يقع مقهى حصير في في شارع الأمير منصور بحي الجوهرة  في مدينة الخفجي ، وهو عبارة عن بار قهوة مختصة ويوفر ايضا خدمة طلبات سيارات.',
+    ],
+    isTrending: false,
+    isBeach: false,
+    isActivities: false,
+    isResturant: true,
+    isHotel: false,
+  ),
+
+  Places(
+    id: 'm43',
+    categories: [
+      'c5',
+    ],
+    cityName: 'الخفجي',
+    title: 'بانو كافيه',
+    imageUrlPlace:
+        'https://j.top4top.io/p_25856zeqg1.jpg',
+    activities: [
+      'زيارة المواقع الأثرية',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    placeType: PlaceType.CityDown,
+    mapUrl: 'https://maps.app.goo.gl/c89fdoRSpRSZSjSj6?g_st=ic',
+    evaluation: '5.0',
+    description: [
+      'يقع مقهى بانو في في شارع الملك عبدالله بحي العزيزية  في مدينة الخفجي ، وهو عبارة عن مقهى يقدم  القهوة المختصة.',
+    ],
+    isTrending: false,
+    isBeach: false,
+    isActivities: false,
+    isResturant: true,
+    isHotel: false,
+  ),
+  Places(
+    id: 'm44',
+    categories: [
+      'c5',
+    ],
+    cityName: 'الخفجي',
+    title: 'العثيم مول',
+    imageUrlPlace:
+        'https://a.top4top.io/p_2585adtnl1.jpg',
+    activities: [
+      'زيارة المواقع الأثرية',
+      'جولة سياحية على الأقدام',
+      'زيارة المراكز التجارية للتبضع',
+      'تناول وجبة الغداء',
+      'استمتاع المناظر الجملية'
+    ],
+    placeType: PlaceType.CityDown,
+    mapUrl: ' https://maps.app.goo.gl/TusSLTykg7siFEkv9?g_st=ic',
+    evaluation: '3.5',
+    description: [
+      'تعد شركة عبدالله العثيم للأستثمار أحد أكبر الشركات بالمملكة العربية السعودية في مجال إنشاء وإدارة وتشغيل المجمعات التجارية الضخمة،يقع العثيم مول في شارع الملك عبدالله بن عبدالعزيز بحي الجوهرة في مدينة الخفجي ، وهو مجمع يضم محلات الملابس والعطور ويوجد به مطاعم وكافيهات والعاب سفوري لاند.',
+    ],
+    isTrending: false,
+    isBeach: false,
+    isActivities: true,
+    isResturant: true,
+    isHotel: false,
+  ),
 ];
