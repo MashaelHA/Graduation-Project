@@ -2,9 +2,11 @@
 
 Development Intelligently System For Visitors to Eastern, KSA
 
-## Getting Started
+## About the project
 
-This project is a starting point for a Flutter application.
+A program for tourist sites in the eastern region to guide Visitors to places, restaurants, cafes, museums, and others.
+
+Discover and help anyone to visit the Eastern region.
 
 A few resources to get you started if this is your first Flutter project:
 
