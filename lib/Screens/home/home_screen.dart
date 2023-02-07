@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../firebaseauth.dart';
+import '../../data/firebaseauth.dart';
 import '../../utils/constants.dart';
 import '../../widgets/photoviewer.dart';
 import 'components/header.dart';
@@ -70,6 +70,13 @@ bool isloading = false;
       }
     }
   }
+  else if(title=="فنادق"){
+     for (var i = 0; i < PlaceType_data.length; i++) {
+      if (PlaceType_data[i].isHotel) {
+        placelist.add(PlaceType_data[i]);
+      }
+    }
+  }
   else{
 
   }
@@ -98,13 +105,14 @@ bool isloading = false;
     super.initState();
   }
   int currentindex=0;
-  String title = "مطاعم";
-  List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم"];
+  String title = "شائع";
+  List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم","فنادق"];
   List<Icon> iconsitem = [
     Icon(Icons.local_fire_department_outlined, color: Colors.blue),
     Icon(Icons.beach_access_outlined, color: Colors.blue),
     Icon(Icons.line_weight_outlined, color: Colors.blue),
-    Icon(Icons.restaurant, color: Colors.blue)
+    Icon(Icons.restaurant, color: Colors.blue),
+    Icon(Icons.hotel, color: Colors.blue)
   ];
  
   List<String> photoitems = [
@@ -154,7 +162,6 @@ bool isloading = false;
 
 
               SizedBox(
-                //color: Colors.red,
                 height: 230,
                 width: 600,
                 child: customwid,
@@ -344,6 +351,7 @@ bool isloading = false;
                                           Icon(
                                             Icons.location_on,
                                             color: SecondaryYellow,
+                                            size: 15,
                                           ),
                                           Text(
                                             placelist[index].cityName,
@@ -361,7 +369,7 @@ bool isloading = false;
                                     ],
                                   ),
                                   SizedBox(
-                                    width: width / 10,
+                                    width: 10,//width / 10,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,

@@ -28,8 +28,8 @@ class _CateegoriesState extends State<Cateegories> {
           Center(
             child: Padding(
               padding: const EdgeInsets.only(
-                top: 50,
-                left: 200,
+                top: 10,
+                left: 150,
               ),
               child: Text(
                 'ما الذي تهتم به أكثر؟',

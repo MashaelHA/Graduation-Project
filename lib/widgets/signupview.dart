@@ -1,7 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, unused_local_variable, avoid_unnecessary_containers, non_constant_identifier_names, sized_box_for_whitespace, unused_import, no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
-import 'package:project_visitor_to_eastrn/firebaseauth.dart';
+import 'package:project_visitor_to_eastrn/data/firebaseauth.dart';
 
 import '../utils/constants.dart';
 import '../Screens/Signup/components/survey.dart';

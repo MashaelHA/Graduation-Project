@@ -30,7 +30,10 @@ class _ItemsFavoriteState extends State<ItemsFavorite> {
   Widget build(BuildContext context) {
     // ignore: non_constant_identifier_names
     final SelectedPlacesFavorate = Cateegories_data.firstWhere((place) => place.id == place.id);
-
+    // ignore: unused_element
+    getSelectedPlacesFavorate(){
+        
+    }
     // final filterdFavorite = Cateegories_data.where((cat) {
     //   return cat.id.contains('other');
     // }).toList();

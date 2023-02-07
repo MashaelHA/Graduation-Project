@@ -8,7 +8,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'Screens/home/components/tab.dart';
+import '../Screens/home/components/tab.dart';
 class Firebaseauth{
   
 CollectionReference userref =FirebaseFirestore.instance.collection("users");

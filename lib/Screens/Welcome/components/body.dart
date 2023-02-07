@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project_visitor_to_eastrn/firebaseauth.dart';
+import 'package:project_visitor_to_eastrn/data/firebaseauth.dart';
 
 import '../../../utils/constants.dart';
 import '../../../widgets/signupview.dart';

@@ -2,7 +2,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:project_visitor_to_eastrn/firebaseauth.dart';
+import 'package:project_visitor_to_eastrn/data/firebaseauth.dart';
 
 import '../../data/app_data.dart';
 import '../../models/place.dart';

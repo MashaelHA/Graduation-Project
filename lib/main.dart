@@ -121,7 +121,7 @@ class _MyAppState extends State<MyApp> {
               subtitle1: const TextStyle(
                   color: kTittileColor,
                   fontFamily: 'Almarai',
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w200),
               subtitle2: const TextStyle(
                   color: kPrimaryLightColor,

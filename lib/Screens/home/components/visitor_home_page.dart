@@ -54,7 +54,15 @@ class _HomePageState extends State<VisitorHomePage> {
           placelist.add(PlaceType_data[i]);
         }
       }
-    } else {}
+    } 
+    else if(title=="فنادق"){
+     for (var i = 0; i < PlaceType_data.length; i++) {
+      if (PlaceType_data[i].isHotel) {
+        placelist.add(PlaceType_data[i]);
+      }
+     }
+    }
+  else {}
 
     isFavorite = List<bool>.filled(placelist.length, false);
   }
@@ -70,12 +78,13 @@ class _HomePageState extends State<VisitorHomePage> {
 
   int currentindex = 0;
   String title = "شائع";
-  List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم"];
+  List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم","فنادق"];
   List<Icon> iconsitem = [
     Icon(Icons.local_fire_department_outlined, color: Colors.blue),
     Icon(Icons.beach_access_outlined, color: Colors.blue),
     Icon(Icons.line_weight_outlined, color: Colors.blue),
-    Icon(Icons.restaurant, color: Colors.blue)
+    Icon(Icons.restaurant, color: Colors.blue),
+    Icon(Icons.hotel, color: Colors.blue)
   ];
 
   List<String> photoitems = [
@@ -342,7 +351,7 @@ class _HomePageState extends State<VisitorHomePage> {
                                       ],
                                     ),
                                     SizedBox(
-                                      width: width / 8,
+                                      width: 8,//width / 8,
                                     ),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.end,

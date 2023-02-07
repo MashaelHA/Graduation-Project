@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "959210443056",
+    "project_id": "visitortoeastern",
+    "storage_bucket": "visitortoeastern.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959210443056:android:a31f5f3c2a52c52b16b8f5",
+        "android_client_info": {
+          "package_name": "com.example.project_visitor_to_eastrn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959210443056-4uun7m76mvq16acgmsm2arm8692d4igi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzm0FwndGjAz6iLxBBEIHJJ3rz0UPGSz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959210443056-4uun7m76mvq16acgmsm2arm8692d4igi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959210443056:android:d3dea6c02a8a2dc316b8f5",
+        "android_client_info": {
+          "package_name": "com.example.visitor_to_eastern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959210443056-4uun7m76mvq16acgmsm2arm8692d4igi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzm0FwndGjAz6iLxBBEIHJJ3rz0UPGSz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959210443056-4uun7m76mvq16acgmsm2arm8692d4igi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
