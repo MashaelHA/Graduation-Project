@@ -11,7 +11,6 @@ const Cateegories_data = const [
   Category(
     id: 'h1',
     title: 'الأنشطة',
-    // color: Colors.purple,
     imageUrl:
         'https://www.ootlah.com/wp-content/uploads/2022/08/2-halfmoon_0007_WhatsApp-Image-2022-04-29-at-4.06.28-PM-1.jpg',
   ),
@@ -25,27 +24,23 @@ const Cateegories_data = const [
   Category(
     id: 'h3',
     title: 'تأمل الطبيعة',
-    // color: Colors.orange,
     imageUrl:
         'http://www.asdaa-okazz.com/uploads/original_images/c0407cO_O20a1d556-c1a3-498c-b888-a13228e6e7bc.jpeg',
   ),
   Category(
     id: 'h4',
     title: 'التجول في المدن',
-    // color: Colors.amber,
     imageUrl: 'https://www.cruisemapper.com/images/ports/10144-bc7d0d8647.jpg',
   ),
   Category(
     id: 'h5',
     title: 'التخييم',
-    // color: Colors.blue,
     imageUrl:
         'https://img.rezdy.com/PRODUCT_IMAGE/13699/emptyquarter_gallery_11_lg.jpg',
   ),
   Category(
     id: 'h6',
     title: 'التنزه في الحدائق',
-    // color: Colors.green,
     imageUrl:
         'https://www.trfihi-parks.com/images/parks/LjLa8D_1537844822_1.jpg',
   ),
@@ -410,7 +405,7 @@ const PlaceType_data = const [
     mapUrl: 'https://goo.gl/maps/VsuRUcqb2UsHcRU58',
     evaluation: '3.3',
     description: [
-      '',
+      'يقع الخفجي مول في شارع الأمير فهد بن سلمان في مدينة الخفجي ، يعتبر الخفجي مول واحداً من أهم الأسواق التجارية المميزة والرائعة،ويضم العديد من المرافق الترفيهية التي تجذب اليه السائحين والعائلات للأستمتاع به.',
     ],
     isTrending: false,
     isBeach: false,
@@ -494,7 +489,7 @@ const PlaceType_data = const [
     mapUrl: 'https://goo.gl/maps/HchszUNuZwSM4JNQ9',
     evaluation: '4.2',
     description: [
-      '',
+      'يعد كورنيش الخفجي واحدا من افضل الأماكن السياحية في الخفجي ، حيث يتمتع بإطلالات ساحره على الخليج العربي ، ويحتوي على ممشى ومساحات خضراء واسعة . كما يتميز بمجموعة من الفنادق والمطاعم القريبة منه.',
     ],
     isTrending: true,
     isBeach: true,

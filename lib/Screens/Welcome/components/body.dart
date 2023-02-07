@@ -1,17 +1,22 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
 
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project_visitor_to_eastrn/firebaseauth.dart';
 
 import '../../../utils/constants.dart';
 import '../../../widgets/signupview.dart';
+import '../../home/components/visitor_home_page.dart';
 import 'background.dart';
 import '../../Signup/signup_screen.dart';
 import '../../home/components/tab.dart';
 // import '../../home/home_as_visitor_screen.dart';
+Firebaseauth firebasecontroller=Firebaseauth();
+TextEditingController email=TextEditingController();
 
+TextEditingController password=TextEditingController();
 // ignore: use_key_in_widget_constructors
 class Body extends StatelessWidget {
   @override
@@ -35,6 +40,7 @@ class Body extends StatelessWidget {
             SizedBox(
               width: 300,
               child: TextFormField(
+                controller: email,
                 style: const TextStyle(
                   color: kPrimaryLightColor,
                 ),
@@ -62,6 +68,7 @@ class Body extends StatelessWidget {
             SizedBox(
               width: 300,
               child: TextFormField(
+                controller: password,
                 // obscureText: _isObscured,
                 style: const TextStyle(
                   color: kPrimaryLightColor,
@@ -103,8 +110,8 @@ class Body extends StatelessWidget {
               width: size.width * 0.8,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ChangePage()));
+                  loginUser(context);
+                
                 },
                 child: Text(
                   'تسجيل الدخول',
@@ -161,10 +168,9 @@ class Body extends StatelessWidget {
               width: 150,
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //     context, MaterialPageRoute(builder: (context) => HomePageVisitor(),
-                  //     ),)
-                  //     ;
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => VisitorHomePage(),
+                      ),);
                 },
                 child: Text(
                   'الدخول كزائر',
@@ -176,5 +182,30 @@ class Body extends StatelessWidget {
         ),
       ),
     );
+  }
+  void loginUser(context) async {
+    String _email = email.text.trim();
+    String _password = password.text.trim();
+
+    if (_email.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          'EMAIL MUST BE REQUIRED',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.red,
+      ));
+    } else if (_password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          'PASSWORD MUST BE REQUIRED',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.red,
+      ));
+    } else {
+      firebasecontroller.getdata(email.text,password.text,context);
+                  
+    }
   }
 }

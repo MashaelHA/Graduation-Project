@@ -1,13 +1,21 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-import 'Screens/Welcome/welcome_screen.dart';
+// import 'package:project_visitor_to_eastrn/widgets/signupview.dart';
+// import 'Screens/Signup/signup_screen.dart';
+import 'Screens/Welcome/components/body.dart';
+// import 'Screens/Welcome/welcome_screen.dart';
+// import 'Screens/account/account_screen.dart';
+// import 'Screens/home/home_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'utils/constants.dart';
 // ignore: unused_import
 import 'package:flutter_localizations/flutter_localizations.dart';
-// import './models/place.dart';
-// import './data/app_data.dart';
-// import './Screens/signup_screen.dart';
-// import 'Screens/places/places_screens.dart';
+
+// import 'widgets/survey_item.dart';
+// // import './models/place.dart';
+// // import './data/app_data.dart';
+// // import './Screens/signup_screen.dart';
+// // import 'Screens/places/places_screens.dart';
 
 void main() => runApp(MyApp());
 
@@ -51,6 +59,8 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+     WidgetsFlutterBinding.ensureInitialized();
+   Firebase.initializeApp();
     return MaterialApp(
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
@@ -65,62 +75,62 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
           primaryColor: kPrimaryColor,
           scaffoldBackgroundColor: Colors.white,
-          fontFamily: 'Fontspring-DEMO-biotif',
+          fontFamily: 'Almarai',
           textTheme: ThemeData.light().textTheme.copyWith(
               headline6: const TextStyle(
                 color: SecondaryBlue,
                 fontSize: 20,
-                fontFamily: 'Fontspring-DEMO-biotif',
+                fontFamily: 'Almarai',
                 fontWeight: FontWeight.bold,
               ),
               headline5: const TextStyle(
                 // color: kPrimaryLightColor,
                 fontSize: 20,
-                fontFamily: 'Fontspring-DEMO-biotif',
+                fontFamily: 'Almarai',
                 fontWeight: FontWeight.bold,
               ),
               headline4: const TextStyle(
                 color: SecondaryGreen,
                 fontSize: 20,
-                fontFamily: 'Fontspring-DEMO-biotif',
+                fontFamily: 'Almarai',
                 fontWeight: FontWeight.bold,
               ),
               headline3: const TextStyle(
                 color: kPrimaryColor,
-                fontSize: 20,
-                fontFamily: 'Fontspring-DEMO-biotif',
+                fontSize: 16,
+                fontFamily: 'Almarai',
                 fontWeight: FontWeight.w500,
               ),
               headline2: const TextStyle(
                 color: kTittileColor,
                 fontSize: 20,
-                fontFamily: 'Fontspring-DEMO-biotif',
+                fontFamily: 'Almarai',
                 fontWeight: FontWeight.w200,
               ),
               headline1: const TextStyle(
                 color: kPrimaryColor,
                 fontSize: 20,
-                fontFamily: 'Fontspring-DEMO-biotif',
+                fontFamily: 'Almarai',
                 fontWeight: FontWeight.w200,
               ),
               headlineLarge: const TextStyle(
                 color: kTittileColor,
-                fontFamily: 'Fontspring-DEMO-biotif',
+                fontFamily: 'Almarai',
                 fontSize: 24,
               ),
               subtitle1: const TextStyle(
                   color: kTittileColor,
-                  fontFamily: 'Fontspring-DEMO-biotif',
+                  fontFamily: 'Almarai',
                   fontSize: 20,
                   fontWeight: FontWeight.w200),
               subtitle2: const TextStyle(
                   color: kPrimaryLightColor,
-                  fontFamily: 'Fontspring-DEMO-biotif',
+                  fontFamily: 'Almarai',
                   fontSize: 24,
                   fontWeight: FontWeight.w900),
               bodyText1: const TextStyle(
                 color: kPrimaryLightColor,
-                fontFamily: 'Fontspring-DEMO-biotif',
+                fontFamily: 'Almarai',
                 fontSize: 20,
                 // fontWeight: FontWeight.normal,
               )),
@@ -147,21 +157,7 @@ class _MyAppState extends State<MyApp> {
               borderSide: BorderSide.none,
             ),
           )),
-      home: WelcomeScreen(),
-
-      // initialRoute: '/',
-      // routes: const {
-      //    '/': (ctx) => WelcomeScreen(),
-      //   '/category-places':(context) => CategoryPlaces(),
-
-      //   // '/': (ctx) => Tabs(_favoriteMeals),
-      //   // signupScreen.routeName: (ctx) => SignUp(),
-      //   // MealDetail.routeName: (ctx) =>
-      //   //     MealDetail(_toggleFavorit, _isMealFavorite),
-      // }, // pushNamed
-      // onUnknownRoute: (settings) {
-      //   return MaterialPageRoute(builder: (ctx) => WelcomeScreen());
-      // },
+      home: Body(),
     );
   }
 }

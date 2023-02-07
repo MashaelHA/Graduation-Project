@@ -5,6 +5,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../../firebaseauth.dart';
 import '../../utils/constants.dart';
 import '../../widgets/photoviewer.dart';
 import 'components/header.dart';
@@ -28,14 +30,75 @@ class HomePage extends StatefulWidget {
     required this.imageUrlPlace,
     required this.evaluation,
   });
-
+  
   @override
   State<HomePage> createState() => _HomePageState();
 }
+Firebaseauth _controller=Firebaseauth();
+List <Places> placelist=[];
 
+late List <bool>  isFavorite;
 class _HomePageState extends State<HomePage> {
+bool isloading = false;
+  getplaces(String title)  async {
+  isloading = false;
+  isFavorite=[];
+  placelist=[];
+  if(title=="مطاعم"){
+    for (var i = 0; i < PlaceType_data.length; i++) {
+      if (PlaceType_data[i].isResturant) {
+        placelist.add(PlaceType_data[i]);
+      }
+    }
+  }else if(title=="انشطة"){
+     for (var i = 0; i < PlaceType_data.length; i++) {
+      if (PlaceType_data[i].isActivities) {
+        placelist.add(PlaceType_data[i]);
+      }
+    }
+  }else if(title=="شواطئ"){
+     for (var i = 0; i < PlaceType_data.length; i++) {
+      if (PlaceType_data[i].isBeach) {
+        placelist.add(PlaceType_data[i]);
+      }
+    }
+  }
+  else if(title=="شائع"){
+     for (var i = 0; i < PlaceType_data.length; i++) {
+      if (PlaceType_data[i].isTrending) {
+        placelist.add(PlaceType_data[i]);
+      }
+    }
+  }
+  else{
 
-  String title = "";
+  }
+    
+   //isFavorite = List<bool>.filled(placelist.length, false);
+    for (var i = 0; i < placelist.length; i++) {
+      bool ischoosen=false;
+      await _controller.isFavorite(placelist[i].id.toString()).then((value) {
+        ischoosen=!value;
+        isFavorite.add(ischoosen);
+      } 
+      );
+    }
+    setState(() {
+      isloading=true;
+    });
+}
+  @override
+  void initState() {
+    
+    getplaces("مطاعم");
+      
+    
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+  }
+  int currentindex=0;
+  String title = "مطاعم";
   List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم"];
   List<Icon> iconsitem = [
     Icon(Icons.local_fire_department_outlined, color: Colors.blue),
@@ -43,6 +106,7 @@ class _HomePageState extends State<HomePage> {
     Icon(Icons.line_weight_outlined, color: Colors.blue),
     Icon(Icons.restaurant, color: Colors.blue)
   ];
+ 
   List<String> photoitems = [
     "khabar.PNG",
     "first.jpg",
@@ -51,12 +115,11 @@ class _HomePageState extends State<HomePage> {
   ];
   MyCustomWidget customwid = MyCustomWidget();
   @override
-  int count = 3;
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-     // ignore: non_constant_identifier_names
+     // ignore: non_constant_identifier_names, unused_local_variable
      final SelectedPlaces = PlaceType_data.firstWhere((place) => place.id == place.id);
 
     //  final filterdPlaces = PlaceType_data.where((place) {
@@ -84,50 +147,34 @@ class _HomePageState extends State<HomePage> {
                     ),
                     textAlign: TextAlign.start,
                   )),
-
-              // Container(
-              //     padding: EdgeInsets.symmetric(horizontal: 15),
-              //     alignment: Alignment.centerRight,
-              //     child: Text(
-              //       "قم بإنشاء حساب واختر اهتماماتك",
-              //       style: TextStyle(
-              //           color: Colors.green,
-              //           fontSize: 15,
-              //           fontWeight: FontWeight.bold),
-              //       textAlign: TextAlign.end,
-              //     )),
               SizedBox(
                 height: 10,
               ),
 
 
 
-              Column(
-                children: [
-                  SizedBox(
-                    //color: Colors.red,
-                    height: 230,
-                    width: 600,
-                    child: customwid,
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(right: width / 2.5),
-                    alignment: Alignment.center,
-                    height: 20,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: customwid.getcount(),
-                      itemBuilder: (context, index1) {
-                        return Icon(
-                          Icons.circle,
-                          size: 10,
-                          color:
-                              index1 == count ? Colors.red : Colors.grey[300],
-                        );
-                      },
-                    ),
-                  )
-                ],
+              SizedBox(
+                //color: Colors.red,
+                height: 230,
+                width: 600,
+                child: customwid,
+              ),
+              Container(
+                padding: EdgeInsets.only(right: width / 2.5),
+                alignment: Alignment.center,
+                height: 20,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: items.length,
+                  itemBuilder: (context, index1) {
+                    return Icon(
+                      Icons.circle,
+                      size: 10,
+                      color:
+                          index1 == currentindex ? Colors.red : Colors.grey[300],
+                    );
+                  },
+                ),
               ),
 
               SizedBox(
@@ -162,7 +209,9 @@ class _HomePageState extends State<HomePage> {
                         child: InkWell(
                           onTap: () {
                             setState(() {
+                              currentindex=index;
                               title = items[index];
+                              getplaces(title);
                             });
                           },
                           child: Row(
@@ -192,14 +241,15 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: height / 4.2,
                 width: double.infinity,
-                child: ListView.separated(
+                child:isloading? ListView.separated(
                   separatorBuilder: (context, index) {
                     return SizedBox(
                       width: 20,
                     );
                   },
-                  reverse: true,
-                  itemCount: photoitems.length,
+                  // reverse: true,
+                  itemCount: placelist.length,
+                  
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return SingleChildScrollView(
@@ -229,7 +279,7 @@ class _HomePageState extends State<HomePage> {
                                     borderRadius: BorderRadius.circular(15.0),
                                     child: Image.network( //.asset(
                                       //"assets/images/${photoitems[index]}",
-                                      SelectedPlaces.imageUrlPlace,
+                                      placelist[index].imageUrlPlace,
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -242,27 +292,32 @@ class _HomePageState extends State<HomePage> {
                                   // width: 25,
                                   //  color: Colors.grey,
                                   alignment: Alignment.topRight,
-                                  child: Ink(
-                                    // decoration: BoxDecoration(
-                                    //   border: Border.all(
-                                    //       color: Colors.grey, width: 5.0),
-                                    //   color: Color.fromARGB(255, 60, 63, 62),
-                                    //   shape: BoxShape.circle,
-                                    // ),
-                                    child: InkWell(
-                                      // radius: 30,
-                                      // backgroundColor: Colors.greenAccent,
-                                      // borderRadius:
-                                      //     BorderRadius.circular(400.0),
-                                      onTap: () {},
-                                      child: Padding(
-                                        padding: EdgeInsets.all(5),
-                                        child: Icon(
-                                          Icons.favorite_border,
-                                          color: kPrimaryLightColor,
-                                          size: 20,
-                                          // shadows: [],
-                                        ),
+                                  child: InkWell(
+                                    onTap: () async {
+                                      
+                                        bool isexist=false;
+                                      await _controller.isFavorite(placelist[index].id.toString()).then((value) {
+                                        
+                                          isexist=value;
+                                          return value;
+                                        });
+                                      setState(() {
+                                        isFavorite[index]=!isFavorite[index];
+                                       
+                                        if(isexist){
+                                          _controller.addtofavorite(placelist[index].id);
+                                        } else{
+                                          _controller.deletefromfavorite(placelist[index].id);
+                                        }
+                                      });
+                                    },
+                                    child: Padding(
+                                      padding: EdgeInsets.all(5),
+                                      child: Icon(
+                                        Icons.favorite,
+                                        color:isFavorite[index]?Colors.red:Colors.white,
+                                        size: 20,
+                                        // shadows: [],
                                       ),
                                     ),
                                   ),
@@ -271,11 +326,12 @@ class _HomePageState extends State<HomePage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
+                                  
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Text(
-                                        SelectedPlaces.title,
+                                        placelist[index].title,
                                         // "شتوية فاردو",
                                         style: Theme.of(context)
                                             .textTheme
@@ -290,7 +346,7 @@ class _HomePageState extends State<HomePage> {
                                             color: SecondaryYellow,
                                           ),
                                           Text(
-                                            SelectedPlaces.cityName,
+                                            placelist[index].cityName,
                                             // "الخبر الشبيلي",
                                             style: TextStyle(
                                               color: SecondaryBlue,
@@ -305,7 +361,7 @@ class _HomePageState extends State<HomePage> {
                                     ],
                                   ),
                                   SizedBox(
-                                    width: width / 8,
+                                    width: width / 10,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
@@ -315,7 +371,7 @@ class _HomePageState extends State<HomePage> {
                                         color: SecondaryPink,
                                       ),
                                       Text(
-                                        SelectedPlaces.evaluation,
+                                        placelist[index].evaluation,
                                         // "4.8",
                                         style: TextStyle(
                                           color: kPrimaryColor,
@@ -331,7 +387,19 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   },
+                ):Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  
+                  crossAxisAlignment: CrossAxisAlignment.center,
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [
+                CircularProgressIndicator(
+                  value: 2,
+                  semanticsLabel: 'Circular progress indicator',
                 ),
+                Text("loading"),
+              ],
+            ),
               ),
             ],
           ),

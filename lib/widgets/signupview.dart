@@ -1,6 +1,7 @@
-// ignore_for_file: use_key_in_widget_constructors, unused_local_variable, avoid_unnecessary_containers, non_constant_identifier_names, sized_box_for_whitespace, unused_import
+// ignore_for_file: use_key_in_widget_constructors, unused_local_variable, avoid_unnecessary_containers, non_constant_identifier_names, sized_box_for_whitespace, unused_import, no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
+import 'package:project_visitor_to_eastrn/firebaseauth.dart';
 
 import '../utils/constants.dart';
 import '../Screens/Signup/components/survey.dart';
@@ -8,6 +9,7 @@ import '../Screens/Welcome/welcome_screen.dart';
 import '../Screens/Welcome/components/background.dart';
 
 
+  Firebaseauth _controller1=Firebaseauth();
 class SignUpView extends StatefulWidget {
   // const SignUpView({super.key});
 
@@ -70,17 +72,20 @@ class _SignUpViewState extends State<SignUpView> {
                   width: 300,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context,
+                     
+                      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => WelcomeScreen()));
                     },
                     child: Text(
                       ' اضغط هنا لتسجيل الدخول',
                       style: Theme.of(context).textTheme.headline5,
                     ),
-                  ),
+                  ),//
                 ),
               ],
             ),
+            
           ),
         ),
     );
@@ -130,9 +135,7 @@ class _SignUpViewState extends State<SignUpView> {
       padding: const EdgeInsets.all(10),
       child: ElevatedButton(
           onPressed: () {
-            //  loginUser();
-            Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SurveyPage()));
+             loginUser(context);
           },
           // ignore: sort_child_properties_last
           child: Text(
@@ -154,17 +157,61 @@ class _SignUpViewState extends State<SignUpView> {
   }
 
 
-   void loginUser() async {
+   void loginUser(context) async {
     String _email = email.text.trim();
     String _password = password.text.trim();
-    
+    String _phone = phone.text.trim();
+    String _name= name.text.trim();
+    String _cpassword = cpassword.text.trim();
 
     if (_email.isEmpty) {
-      print("USER_NAME_MUST_BE_REQUIRED");
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          'EMAIL MUST BE REQUIRED',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.red,
+      ));
     } else if (_password.isEmpty) {
-      print("PASSWORD_MUST_BE_REQUIRED");
-    } else {
-      
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          'PASSWORD MUST BE REQUIRED',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.red,
+      ));
+    } 
+    else if (_name.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          'NAME MUST BE REQUIRED',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.red,
+      ));
+    }else if (_phone.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          'PHONE MUST BE REQUIRED',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.red,
+      ));
+    }else if (_cpassword.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          'CPASSWORD MUST BE REQUIRED',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.red,
+      ));
+    }else {
+      _controller1.postdata(email.text, name.text, password.text, phone.text);
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            //  loginUser();
+            Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SurveyPage()));
+                  
     }
   }
   

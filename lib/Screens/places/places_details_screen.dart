@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import '../../firebaseauth.dart';
 import '../../models/place.dart';
 import '../../data/app_data.dart';
 import '../../utils/app_export.dart';
@@ -25,10 +26,39 @@ class PlacesDetails extends StatefulWidget {
   @override
   State<PlacesDetails> createState() => _PlacesDetailsState();
 }
+bool isloading=false;
+bool isfavorteitem=true;
+Firebaseauth _controller=Firebaseauth();
+class _PlacesDetailsState extends State<PlacesDetails> { 
+  @override
+  void initState() {
+    isFavorite();
+    Future.delayed(const Duration(seconds: 2), () {
+        setState(() {
+          isloading=true;
+        });
 
-class _PlacesDetailsState extends State<PlacesDetails> {
+});
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+  }
+  
+   isFavorite(){
+      setState(() {
+   _controller.isFavorite(widget.id).then((value) {
+   isfavorteitem=!value;
+   // ignore: avoid_print
+   print("value is");
+   // ignore: avoid_print
+   print(isfavorteitem);
+  });
+      });
+}
   @override
   Widget build(BuildContext context) {
+    
+   
     // ignore: non_constant_identifier_names
     final SelectedPlaces = PlaceType_data.firstWhere((place) => place.id == widget.id);
 
@@ -275,21 +305,59 @@ class _PlacesDetailsState extends State<PlacesDetails> {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: getPadding(
-                            top: 5,
-                            left: 5,
+                        isloading?InkWell(
+                          onTap: () {
+                            
+                            if(!isfavorteitem){
+
+                            _controller.addtofavorite(widget.id);
+                             
+                            setState(() {
+                              isloading=false;
+                              Future.delayed(const Duration(seconds: 2), () {
+                                        isFavorite();
+                                    });
+                            Future.delayed(const Duration(seconds: 4), () {
+                              setState(() {
+                                isloading=true;
+                                       });
+                                    });
+                            });
+                            
+                            }else{
+                              
+                          _controller.deletefromfavorite(widget.id);
+                            setState(() {
+                              isloading=false;
+                              Future.delayed(const Duration(seconds: 2), () {
+                                        isFavorite();
+                                    });
+                            });
+                             Future.delayed(const Duration(seconds: 4), () {
+                              setState(() {
+                                isloading=true;
+                                       });
+                                    });
+                            
+                            }
+                          },
+                          child: Padding(
+                            padding: getPadding(
+                              top: 5,
+                              left: 5,
+                            ),
+                            child: CircleAvatar(
+                                              radius: 17,
+                                              backgroundColor: SecondaryPink.withOpacity(0.2),
+                                              child: Icon(
+                              Icons.favorite,
+                              color: isfavorteitem?Colors.red:Colors.white,
+                              size: 20,
+                            ),
                           ),
-                          child: CircleAvatar(
-                      radius: 17,
-                      backgroundColor: SecondaryPink.withOpacity(0.2),
-                      child: const Icon(
-                            Icons.favorite,
-                            color: SecondaryPink,
-                            size: 20,
                           ),
-                        ),
-                        ),
+                        // ignore: prefer_const_constructors
+                        ):SizedBox(),
                       ],
                     ),
                   ),

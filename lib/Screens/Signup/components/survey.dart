@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../models/custom_form_field.dart';
 import 'survey2.dart';
-import '../../home/components/header.dart';
+// import '../../home/components/header.dart';
 
 class SurveyPage extends StatefulWidget {
   // const SurveyPage({super.key});
@@ -52,7 +52,6 @@ class _SurveyPageState extends State<SurveyPage> {
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Header(),
               SizedBox(
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 20,top: 40),
