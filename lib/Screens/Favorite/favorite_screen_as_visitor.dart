@@ -63,67 +63,21 @@ class FavoraiteVistor extends StatelessWidget {
               ],
             ),
           ),
-
           SizedBox(
             child: Text(
               'قم بإنشاء حساب واختر اهتماماتك',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
-
           const SizedBox(
             height: 50,
           ),
-
-          // SizedBox(
-          //   width: 300,
-          //   child: ElevatedButton.icon(
-          //     onPressed: () {
-          //       //  Navigator.push(context,
-          //       //       MaterialPageRoute(builder: (context) => ChangePage()));
-          //     },
-          //     //  label: Text(
-          //     //     'تسجيل الدخول',
-          //     //     style: TextStyle(fontSize: 24,)
-          //     //   ),
-          //       icon: Padding(
-          //         padding: const EdgeInsets.all(10.0),
-          //         child: CircleAvatar(
-          //           radius: 25,
-          //           backgroundColor: SecondaryPink.withOpacity(0.6),
-          //           child: Icon(
-          //         Icons.arrow_back_ios,
-          //         size: 24,
-          //     ),
-          //         ),
-          //       ),
-          //       label: Text(
-          //         'تسجيل الدخول',
-          //         style: TextStyle(fontSize: 24,)
-          //       ),
-          //     // icon: Icon(
-          //     //   Icons.arrow_back_ios,
-          //     //   size: 24,
-          //     // ),
-          //     // child:
-
-          //       style: ElevatedButton.styleFrom(
-          //               shape: RoundedRectangleBorder(
-          //                   // side: BorderSide(width: 1.0, color: Colors.black),
-          //                   borderRadius: BorderRadius.circular(25)),
-          //                   backgroundColor: Color(0xFF1E1C66).withOpacity(0.5),
-          //               minimumSize: const Size(double.infinity, 50),
-          //             ),
-
-          //     ),
-          // ),
-
           SizedBox(
             width: 300,
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => WelcomeScreen()));
+                    MaterialPageRoute(builder: (context) => WelcomeScreen()));
               },
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(

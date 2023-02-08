@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../data/app_data.dart';
-// import '../../../widgets/survey_item.dart';
 import '../../home/components/tab.dart';
 import '../../home/components/header.dart';
 
@@ -36,7 +35,7 @@ class _CateegoriesState extends State<Cateegories> {
                 textAlign: TextAlign.right,
                 style: Theme.of(context)
                     .textTheme
-                    .headline4, //TextStyle(color: Color.fromARGB(255, 128, 179, 130)),
+                    .headline4,
               ),
             ),
           ),

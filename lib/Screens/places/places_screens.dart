@@ -16,10 +16,6 @@ class CategoryPlaces extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final routeArgumnt =
-    //     ModalRoute.of(context)?.settings.arguments as Map<String, String>;
-    // final categoryId = routeArgumnt['id'];
-    // final categoryTitle = routeArgumnt['title'];
 
     final filterdPlaces = PlaceType_data.where((trip) {
       return trip.categories.contains(categoryId);
@@ -32,7 +28,6 @@ class CategoryPlaces extends StatelessWidget {
       body: Center(
         child: ListView.builder(
           itemBuilder: (ctx, index) {
-            // return Text(filterdPlaces[index].title);
             return PlaceItem(
               id: filterdPlaces[index].id,
               title: filterdPlaces[index].title,

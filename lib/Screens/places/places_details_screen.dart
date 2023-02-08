@@ -26,65 +26,54 @@ class PlacesDetails extends StatefulWidget {
   @override
   State<PlacesDetails> createState() => _PlacesDetailsState();
 }
-bool isloading=false;
-bool isfavorteitem=true;
-Firebaseauth _controller=Firebaseauth();
-class _PlacesDetailsState extends State<PlacesDetails> { 
+
+bool isloading = false;
+bool isfavorteitem = true;
+Firebaseauth _controller = Firebaseauth();
+
+class _PlacesDetailsState extends State<PlacesDetails> {
   @override
   void initState() {
     isFavorite();
     Future.delayed(const Duration(seconds: 2), () {
-        setState(() {
-          isloading=true;
-        });
-
-});
+      setState(() {
+        isloading = true;
+      });
+    });
     // ignore: todo
     // TODO: implement initState
     super.initState();
   }
-  
-   isFavorite(){
-      setState(() {
-   _controller.isFavorite(widget.id).then((value) {
-   isfavorteitem=!value;
-   // ignore: avoid_print
-   print("value is");
-   // ignore: avoid_print
-   print(isfavorteitem);
-  });
+
+  isFavorite() {
+    setState(() {
+      _controller.isFavorite(widget.id).then((value) {
+        isfavorteitem = !value;
+        // ignore: avoid_print
+        print("value is");
+        // ignore: avoid_print
+        print(isfavorteitem);
       });
-}
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    
-   
     // ignore: non_constant_identifier_names
-    final SelectedPlaces = PlaceType_data.firstWhere((place) => place.id == widget.id);
+    final SelectedPlaces =
+        PlaceType_data.firstWhere((place) => place.id == widget.id);
 
     return Scaffold(
       appBar: AppBar(
         title: Row(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(widget.title)
-            ],
-            ),
-            backgroundColor: kPrimaryColor.withOpacity(0.5),
-            toolbarHeight: 40,
+          children: [Text(widget.title)],
+        ),
+        backgroundColor: kPrimaryColor.withOpacity(0.5),
+        toolbarHeight: 40,
       ),
       backgroundColor: ColorConstant.fromHex('#f9f9f9'),
-      body: 
-      
-      Column(
-        //  mainAxisAlignment: MainAxisAlignment.start,
+      body: Column(
         children: [
-          //       SafeArea(
-          // child: Scaffold(
-          //   backgroundColor: ColorConstant.fromHex('#f9f9f9'),
-          //   body: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // children: [
           Expanded(
             child: SingleChildScrollView(
               child: Column(
@@ -145,8 +134,8 @@ class _PlacesDetailsState extends State<PlacesDetails> {
                               children: [
                                 Container(
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(
                                         getHorizontalSize(
                                           32.00,
                                         ),
@@ -157,7 +146,7 @@ class _PlacesDetailsState extends State<PlacesDetails> {
                                         ),
                                       ),
                                     ),
-                                    ),
+                                  ),
                                   child: Image.network(
                                     SelectedPlaces.imageUrlPlace,
                                     height: getVerticalSize(
@@ -168,48 +157,12 @@ class _PlacesDetailsState extends State<PlacesDetails> {
                                     ),
                                     fit: BoxFit.cover,
                                     alignment: Alignment.center,
-                                    ),
+                                  ),
                                 ),
-                                // CustomImageView(
-                                //   imagePath: ImageConstant.imgImage,
-                                //   height: getVerticalSize(
-                                //     421.00,
-                                //   ),
-                                //   width: getHorizontalSize(
-                                //     376.00,
-                                //   ),
-                                //   radius: BorderRadius.only(
-                                //     bottomLeft: Radius.circular(
-                                //       getHorizontalSize(
-                                //         32.00,
-                                //       ),
-                                //     ),
-                                //     bottomRight: Radius.circular(
-                                //       getHorizontalSize(
-                                //         32.00,
-                                //       ),
-                                //     ),
-                                //   ),
-                                //   alignment: Alignment.center,
-                                // ),
                               ],
                             ),
                           ),
                         ),
-                        // Align(
-                        //   alignment: Alignment.topLeft,
-                        //   child: IconButton(
-                        //     onPressed: () {},
-                        //     icon: const Padding(
-                        //       padding: EdgeInsets.symmetric(vertical: 30),
-                        //       child: Icon(
-                        //         Icons.arrow_forward_ios,
-                        //         color: Colors.white,
-                        //         size: 30,
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
                       ],
                     ),
                   ),
@@ -248,116 +201,93 @@ class _PlacesDetailsState extends State<PlacesDetails> {
                                         ),
                                       ),
                                     ),
-                                    // TextSpan(
-                                    //   text: "msg2".tr,
-                                    //   style: TextStyle(
-                                    //     color: ColorConstant.indigo900,
-                                    //     fontSize: getFontSize(
-                                    //       20,
-                                    //     ),
-                                    //     fontFamily: 'Montserrat',
-                                    //     fontWeight: FontWeight.w400,
-                                    //     height: getVerticalSize(
-                                    //       1.11,
-                                    //     ),
-                                    //   ),
-                                    // ),
                                   ],
                                 ),
                                 textAlign: TextAlign.right,
                               ),
-                              // Padding(
-                              //   padding: getPadding(
-                              //     top: 3,
-                              //     left: 5,
-                              //   ),
-                              //   child: 
-                                Row(
-                                  // mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    Padding(
-                                      padding: getPadding(top: 3, right: 5),
-                                      child: IconButton(
-                            // ignore: deprecated_member_use
-                            onPressed: () => launch(SelectedPlaces.mapUrl),
-                            icon: 
-                               const Icon(
-                                Icons.location_on_outlined,
-                                color: SecondaryYellow,
-                                size: 30,
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: getPadding(top: 3, right: 5),
+                                    child: IconButton(
+                                      // ignore: deprecated_member_use
+                                      onPressed: () =>
+                                          // ignore: deprecated_member_use
+                                          launch(SelectedPlaces.mapUrl),
+                                      icon: const Icon(
+                                        Icons.location_on_outlined,
+                                        color: SecondaryYellow,
+                                        size: 30,
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    SelectedPlaces.cityName,
+                                    overflow: TextOverflow.ellipsis,
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
                               ),
-                            
-                          ),
-                                    ),
-                                    // Icon(
-                                    //   Icons.location_on_outlined,
-                                    //   color: Colors.yellow, //SecondaryYellow,
-                                    //   size: 30,
-                                    // ),
-                                    Text(
-                                      SelectedPlaces.cityName,
-                                      overflow: TextOverflow.ellipsis,
-                                      textAlign: TextAlign.left,
-                                    ),
-                                  ],
-                                ),
-                              // ),
                             ],
                           ),
                         ),
-                        isloading?InkWell(
-                          onTap: () {
-                            
-                            if(!isfavorteitem){
+                        isloading
+                            ? InkWell(
+                                onTap: () {
+                                  if (!isfavorteitem) {
+                                    _controller.addtofavorite(widget.id);
 
-                            _controller.addtofavorite(widget.id);
-                             
-                            setState(() {
-                              isloading=false;
-                              Future.delayed(const Duration(seconds: 2), () {
+                                    setState(() {
+                                      isloading = false;
+                                      Future.delayed(const Duration(seconds: 2),
+                                          () {
                                         isFavorite();
+                                      });
+                                      Future.delayed(const Duration(seconds: 4),
+                                          () {
+                                        setState(() {
+                                          isloading = true;
+                                        });
+                                      });
                                     });
-                            Future.delayed(const Duration(seconds: 4), () {
-                              setState(() {
-                                isloading=true;
-                                       });
-                                    });
-                            });
-                            
-                            }else{
-                              
-                          _controller.deletefromfavorite(widget.id);
-                            setState(() {
-                              isloading=false;
-                              Future.delayed(const Duration(seconds: 2), () {
+                                  } else {
+                                    _controller.deletefromfavorite(widget.id);
+                                    setState(() {
+                                      isloading = false;
+                                      Future.delayed(const Duration(seconds: 2),
+                                          () {
                                         isFavorite();
+                                      });
                                     });
-                            });
-                             Future.delayed(const Duration(seconds: 4), () {
-                              setState(() {
-                                isloading=true;
-                                       });
+                                    Future.delayed(const Duration(seconds: 4),
+                                        () {
+                                      setState(() {
+                                        isloading = true;
+                                      });
                                     });
-                            
-                            }
-                          },
-                          child: Padding(
-                            padding: getPadding(
-                              top: 5,
-                              left: 5,
-                            ),
-                            child: CircleAvatar(
-                                              radius: 17,
-                                              backgroundColor: SecondaryPink.withOpacity(0.2),
-                                              child: Icon(
-                              Icons.favorite,
-                              color: isfavorteitem?Colors.red:Colors.white,
-                              size: 20,
-                            ),
-                          ),
-                          ),
-                        // ignore: prefer_const_constructors
-                        ):SizedBox(),
+                                  }
+                                },
+                                child: Padding(
+                                  padding: getPadding(
+                                    top: 5,
+                                    left: 5,
+                                  ),
+                                  child: CircleAvatar(
+                                    radius: 17,
+                                    backgroundColor:
+                                        SecondaryPink.withOpacity(0.2),
+                                    child: Icon(
+                                      Icons.favorite,
+                                      color: isfavorteitem
+                                          ? Colors.red
+                                          : Colors.white,
+                                      size: 20,
+                                    ),
+                                  ),
+                                ),
+                              )
+                            // ignore: prefer_const_constructors
+                            : SizedBox(),
                       ],
                     ),
                   ),
@@ -365,24 +295,12 @@ class _PlacesDetailsState extends State<PlacesDetails> {
                     width: getHorizontalSize(
                       322.00,
                     ),
-                    // margin: getMargin(
-                    //   top: 31,
-                    // ),
-                    // child: ListView.builder(
-                    //   itemCount: SelectedPlaces.description.length,
-                    //   itemBuilder: (ctx, index) => Card(
-                    //     child: Text(
-                    //     SelectedPlaces.description[index],
-                    //     maxLines: null,
-                    //     textAlign: TextAlign.right,
-                    //   ),
-                    //   ),
-                      child: Text(
-                        SelectedPlaces.description[0],
-                        maxLines: null,
-                        textAlign: TextAlign.right,
-                      ),
+                    child: Text(
+                      SelectedPlaces.description[0],
+                      maxLines: null,
+                      textAlign: TextAlign.right,
                     ),
+                  ),
                   // ),
                   Container(
                     width: getHorizontalSize(

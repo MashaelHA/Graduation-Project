@@ -50,36 +50,17 @@ class _SurveyPageState extends State<SurveyPage> {
         child: Form(
           key: key,
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom: 20,top: 40),
+                  padding: const EdgeInsets.only(bottom: 20, top: 40),
                   child: Text(
                     'املأ ملف التعريف الخاص بك أولا',
                     style: Theme.of(context).textTheme.headlineLarge,
                   ),
                 ),
               ),
-              //      DropdownButton(
-
-              //   value: _selectedVal,
-              //   items: _ageTypeList
-              //       .map((e) => DropdownMenuItem(
-              //             child: Text(e),
-              //             value: e,
-              //           ))
-              //       .toList(),
-              //   onChanged: (val) {
-              //     setState(() {
-              //       _selectedVal = val as String;
-              //     });
-              //   },
-              // ),
-
               SizedBox(
-                // height: 50,
-                // width: double.infinity,
                 width: 300,
                 child: DropdownButtonFormField(
                   value: _selectedValAge,
@@ -98,25 +79,20 @@ class _SurveyPageState extends State<SurveyPage> {
                     Icons.arrow_downward_outlined,
                     color: Colors.grey,
                   ),
-                  // dropdownColor: Colors.deepPurple.shade50,
                   decoration: InputDecoration(
-                    // labelText: 'عمرك', border: OutlineInputBorder(borderRadius: BorderRadius.circular(8),),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
                         borderSide: const BorderSide(color: Colors.grey)),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
                         borderSide: const BorderSide(color: Colors.grey)),
-
                     fillColor: Colors.grey[200],
                   ),
                 ),
               ),
-
               SizedBox(
                 height: height / 45,
               ),
-
               CustomFormField().field(
                 question: "مدينتك المفضلة",
                 canBeNull: false,
@@ -127,21 +103,12 @@ class _SurveyPageState extends State<SurveyPage> {
                 horizontalTextPadding: 20,
                 verticalTextPadding: 10,
                 labelTextStyle: const TextStyle(color: Colors.black),
-                // icon: const Icon(
-                //   Icons.email_outlined,
-                //   color: Colors.grey,
-                //   size: 25,
-                // ),
                 fieldTextFontSize: 15,
               ),
-
               SizedBox(
                 height: height / 45,
               ),
-
               SizedBox(
-                // height: 50,
-                // width: double.infinity,
                 width: 300,
                 child: DropdownButtonFormField(
                   value: _selectedValActive,
@@ -160,25 +127,20 @@ class _SurveyPageState extends State<SurveyPage> {
                     Icons.arrow_downward_outlined,
                     color: Colors.grey,
                   ),
-                  // dropdownColor: Colors.deepPurple.shade50,
                   decoration: InputDecoration(
-                    // labelText: 'عمرك', border: OutlineInputBorder(borderRadius: BorderRadius.circular(8),),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
                         borderSide: const BorderSide(color: Colors.grey)),
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
                         borderSide: const BorderSide(color: Colors.grey)),
-
                     fillColor: Colors.grey[200],
                   ),
                 ),
               ),
-
               SizedBox(
                 height: height / 45,
               ),
-
               CustomFormField().field(
                 question: "كم من الوقت ستبقى؟",
                 canBeNull: false,
@@ -189,44 +151,35 @@ class _SurveyPageState extends State<SurveyPage> {
                 horizontalTextPadding: 20,
                 verticalTextPadding: 10,
                 labelTextStyle: const TextStyle(color: Colors.black),
-                // icon: const Icon(
-                //   Icons.email_outlined,
-                //   color: Colors.grey,
-                //   size: 25,
-                // ),
                 fieldTextFontSize: 15,
               ),
-
-              // SizedBox(
-              //   height: height / 45,
-              // ),
-
               SizedBox(
                 width: 300,
-                // height: 50,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 170),
                   child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Cateegories()));
-                        // key.currentState!.save();
-                        // debugPrint(_name);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            // side: BorderSide(width: 1.0, color: Colors.black),
-                            borderRadius: BorderRadius.circular(25)), backgroundColor: Colors.pink,
-                        minimumSize: const Size(double.infinity, 50),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Cateegories()));
+                      // key.currentState!.save();
+                      // debugPrint(_name);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25)),
+                      backgroundColor: Colors.pink,
+                      minimumSize: const Size(double.infinity, 50),
+                    ),
+                    child: const Text(
+                      "التالي",
+                      style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
                       ),
-                      child: const Text(
-                        "التالي",
-                        style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.white,
-                        ),
-                      ),
-                      ),
+                    ),
+                  ),
                 ),
               ),
             ],

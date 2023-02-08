@@ -23,11 +23,6 @@ class SignUp extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // ignore: prefer_const_constructors
-            // backgroundColor: Color.fromARGB(255, 27, 24, 91),//rgba(27,24,91,255)
-            // body: Container(
-            //   child: Column(
-            //     children: [
             SizedBox(
               height: height / 30
             ),
@@ -35,32 +30,10 @@ class SignUp extends StatelessWidget {
               "assets/favicon.png",
               height: size.height * 0.21,
             ),
-            // Container(
-            //     height: 200,
-            //     alignment: Alignment.center,
-            //     child: Image.asset("assets/icons/favicon.png")),
-            // // ignore: prefer_const_constructors
-            // Text(
-            //   "Visitors to eastern",
-            //   style: TextStyle(color: Colors.white, fontSize: 25),
-            // ),
-
             SizedBox(
               height: height / 20,
             ),
-            // ignore: sized_box_for_whitespace
-            // Container(
-            //   height: height / 16,
-            //   width: width / 2.5,
-            //   child: MaterialButton(
-            //       // ignore: prefer_const_constructors, sort_child_properties_last
-            //       child: Text("تسجيل الدخول"),
-            //       color: Colors.white,
-            //       onPressed: () {}),
-            // )
           ],
-          //   ),
-          // ],
         ),
       ),
     );

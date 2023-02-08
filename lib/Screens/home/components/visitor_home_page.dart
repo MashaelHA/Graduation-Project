@@ -54,15 +54,13 @@ class _HomePageState extends State<VisitorHomePage> {
           placelist.add(PlaceType_data[i]);
         }
       }
-    } 
-    else if(title=="فنادق"){
-     for (var i = 0; i < PlaceType_data.length; i++) {
-      if (PlaceType_data[i].isHotel) {
-        placelist.add(PlaceType_data[i]);
+    } else if (title == "فنادق") {
+      for (var i = 0; i < PlaceType_data.length; i++) {
+        if (PlaceType_data[i].isHotel) {
+          placelist.add(PlaceType_data[i]);
+        }
       }
-     }
-    }
-  else {}
+    } else {}
 
     isFavorite = List<bool>.filled(placelist.length, false);
   }
@@ -78,7 +76,7 @@ class _HomePageState extends State<VisitorHomePage> {
 
   int currentindex = 0;
   String title = "شائع";
-  List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم","فنادق"];
+  List<String> items = ["شائع", "شواطئ", "انشطة", "مطاعم", "فنادق"];
   List<Icon> iconsitem = [
     Icon(Icons.local_fire_department_outlined, color: Colors.blue),
     Icon(Icons.beach_access_outlined, color: Colors.blue),
@@ -98,14 +96,7 @@ class _HomePageState extends State<VisitorHomePage> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-
-    // ignore: non_constant_identifier_names
-    // final SelectedPlaces = PlaceType_data.firstWhere((place) => place.id == place.id);
-
-    //  final filterdPlaces = PlaceType_data.where((place) {
-    //   return place.categories.contains(place.id);
-    // }).toList();
-
+    
     return Scaffold(
       backgroundColor: Colors.grey[150],
       body: SingleChildScrollView(
@@ -126,11 +117,11 @@ class _HomePageState extends State<VisitorHomePage> {
                 Row(
                   children: [
                     SizedBox(
-                  width: width / 2,
-                ),
-                const SizedBox(
-                  width: 100,
-                ),
+                      width: width / 2,
+                    ),
+                    const SizedBox(
+                      width: 100,
+                    ),
                     CircleAvatar(
                         backgroundImage: AssetImage('assets/favicon.png'))
                   ],
@@ -307,7 +298,6 @@ class _HomePageState extends State<VisitorHomePage> {
                                               ? Colors.red
                                               : Colors.white,
                                           size: 20,
-                                          // shadows: [],
                                         ),
                                       ),
                                     ),
@@ -351,7 +341,7 @@ class _HomePageState extends State<VisitorHomePage> {
                                       ],
                                     ),
                                     SizedBox(
-                                      width: 8,//width / 8,
+                                      width: 8, //width / 8,
                                     ),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.end,

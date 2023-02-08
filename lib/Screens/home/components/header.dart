@@ -10,78 +10,70 @@ class Header extends StatefulWidget {
   State<Header> createState() => _HeaderState();
 }
 
-Firebaseauth _controller=Firebaseauth();
+Firebaseauth _controller = Firebaseauth();
+
 class _HeaderState extends State<Header> {
-  delaytime(){
-  setState(() {
-      isloading=true;
-  });
+  delaytime() {
+    setState(() {
+      isloading = true;
+    });
   }
-  bool isloading=false;
+
+  bool isloading = false;
   @override
   void initState() {
-    Firebaseauth.username=[];
+    Firebaseauth.username = [];
     Future.delayed(const Duration(seconds: 4), () {
-        delaytime();
-
-});
+      delaytime();
+    });
     _controller.getname();
     // ignore: todo
     // TODO: implement initState
     super.initState();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
 
-    return isloading? Container(
-      padding: const EdgeInsets.only(right: 10, top: 18),
-      child: Row(
-        children: [
-          // Container(
-          //   alignment: Alignment.centerRight,
-          //   child: const Icon(
-          //     Icons.search,
-          //     size: 30,
-          //   ),
-          // ),
-          SizedBox(
-            width: width / 2,
-          ),
-          // const SizedBox(
-          //   width: 30,
-          // ),
-          Row(
-            children: [
-              // Text(
-              //   Firebaseauth.username[0]["name"],
-              //   style: TextStyle(
-              //       color: Colors.red,
-              //       fontSize: 17), //Theme.of(context).textTheme.titleSmall,
-              // ),
-              const Text(
-                ' مرحبا , يا',
-                style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 17),
-              ),
-              Text(
-                Firebaseauth.username[0]["name"],
-                style: const TextStyle(
-                    color: Colors.red,
-                    fontSize: 17),
-              ),
-               
-            ],
-          ),
-          const Icon(
-            Icons.person,
-            color: Colors.red,
-            size: 40,
-          ),
-        ],
-      ),
-    ):Container();
+    return isloading
+        ? Container(
+            padding: const EdgeInsets.only(right: 10, top: 18),
+            child: Row(
+              children: [
+                // Container(
+                //   alignment: Alignment.centerRight,
+                //   child: const Icon(
+                //     Icons.search,
+                //     size: 30,
+                //   ),
+                // ),
+                SizedBox(
+                  width: width / 2,
+                ),
+                // const SizedBox(
+                //   width: 30,
+                // ),
+                Row(
+                  children: [
+                    const Text(
+                      ' مرحبا , يا',
+                      style: TextStyle(color: Colors.red, fontSize: 17),
+                    ),
+                    Text(
+                      Firebaseauth.username[0]["name"],
+                      style: const TextStyle(color: Colors.red, fontSize: 17),
+                    ),
+                  ],
+                ),
+                const Icon(
+                  Icons.person,
+                  color: Colors.red,
+                  size: 40,
+                ),
+              ],
+            ),
+          )
+        : Container();
   }
 }
