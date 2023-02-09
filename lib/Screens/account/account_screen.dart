@@ -6,12 +6,38 @@ import '../home/components/header.dart';
 import '../plane/plane_screen.dart';
 import '../Favorite/favorite_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../data/firebaseauth.dart';
 
-class Account extends StatelessWidget {
+class Account extends StatefulWidget {
+  @override
+  State<Account> createState() => _AccountState();
+}
+
+Firebaseauth _controller=Firebaseauth();
+class _AccountState extends State<Account> {
+  delaytime(){
+  setState(() {
+      isloading=true;
+  });
+  }
+  bool isloading=false;
+   @override
+  void initState() {
+    Firebaseauth.username=[];
+    Future.delayed(const Duration(seconds: 4), () {
+        delaytime();
+
+});
+    _controller.getname();
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+  }
+  // const Account({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: isloading? Column(
         children: [
           Header(),
           const SizedBox(
@@ -41,13 +67,15 @@ class Account extends StatelessWidget {
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: const [
-                          Text('البريد الالكتروني',
-                              style: TextStyle(
+                        children: [
+                          Text(
+                            Firebaseauth.username[0]["email"],
+                            // 'البريد الالكتروني',
+                              style: const TextStyle(
                                   fontSize: 18,
                                   fontFamily: 'SST-Arabic-Roman',
                                   color: Color(0xFFB5B5BE))),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                         ],
@@ -269,6 +297,19 @@ class Account extends StatelessWidget {
             ),
           )
         ],
+      ):Center(
+        child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  const CircularProgressIndicator(
+                    value: 2,
+                    semanticsLabel: 'Circular progress indicator',
+                  ),
+                  const Text("loading"),
+                ],
+              ),
       ),
     );
   }
