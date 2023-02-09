@@ -103,26 +103,27 @@ class _AccountState extends State<Account> {
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: const [
-                          SizedBox(
+                        children: [
+                          const SizedBox(
                             child: Icon(
                               Icons.key,
                               size: 24.0,
                               color: Color.fromARGB(255, 255, 242, 59),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Text(
-                            'كلمة المرور',
-                            style: TextStyle(
+                            Firebaseauth.username[0]["phone"],
+                            // 'كلمة المرور',
+                            style: const TextStyle(
                               fontSize: 18,
                               fontFamily: 'SST-Arabic-Roman',
                               color: Color(0xFFB5B5BE),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                         ],
