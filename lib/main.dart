@@ -26,35 +26,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // Map<String, bool> _filters = {
-  //   'turinding': true,
-  //   'beach': false,
-  //   'activity': false,
-  //   'resturant': false,
-  // };
-  // void _chaneFilters(Map<String, bool> filterData){
-
-  // }
-
-  // List<Places> _favoritePlaces = [];
-
-  // void _toggleFavorit(String id) {
-  //   final existingIndex =
-  //       _favoritePlaces.indexWhere((place) => place.id == id);
-  //   if (existingIndex >= 0) {
-  //     setState() {
-  //       _favoritePlaces.removeAt(existingIndex);
-  //     }
-  //   } else {
-  //     setState() {
-  //       _favoritePlaces.add(PlaceType_data.firstWhere((meal) => meal.id == id));
-  //     }
-  //   }
-  // }
-
-  // bool _isPlaceFavorite(String id) {
-  //   return _favoritePlaces.any((meal) => meal.id == id);
-  // }
 
   // This widget is the root of your application.
   @override
