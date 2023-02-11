@@ -130,7 +130,6 @@ class _CateegoriesState extends State<Cateegories> {
               ),
             ),
           ),
-          // ),
         ],
       ),
     );
