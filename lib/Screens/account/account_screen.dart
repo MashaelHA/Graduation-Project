@@ -105,13 +105,6 @@ class _AccountState extends State<Account> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           const SizedBox(
-                            child: Icon(
-                              Icons.key,
-                              size: 24.0,
-                              color: Color.fromARGB(255, 255, 242, 59),
-                            ),
-                          ),
-                          const SizedBox(
                             width: 10,
                           ),
                           Text(

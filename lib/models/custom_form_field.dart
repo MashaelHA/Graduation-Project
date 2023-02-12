@@ -40,7 +40,7 @@ class CustomFormField {
         child: TextFormField(
           maxLines: null,
           initialValue: initialValue,
-          textAlign: TextAlign.left,
+          textAlign: TextAlign.right,
           cursorColor: Colors.black,
           style: TextStyle(
             fontSize: fieldTextFontSize,
