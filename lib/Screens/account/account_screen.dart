@@ -73,7 +73,7 @@ class _AccountState extends State<Account> {
                             // 'البريد الالكتروني',
                               style: const TextStyle(
                                   fontSize: 18,
-                                  fontFamily: 'SST-Arabic-Roman',
+                                  fontFamily: 'Almarai',
                                   color: Color(0xFFB5B5BE))),
                           const SizedBox(
                             width: 5,
@@ -119,7 +119,7 @@ class _AccountState extends State<Account> {
                             // 'كلمة المرور',
                             style: const TextStyle(
                               fontSize: 18,
-                              fontFamily: 'SST-Arabic-Roman',
+                              fontFamily: 'Almarai',
                               color: Color(0xFFB5B5BE),
                             ),
                           ),

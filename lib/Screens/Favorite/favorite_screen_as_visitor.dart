@@ -30,14 +30,14 @@ class FavoraiteVistor extends StatelessWidget {
           SizedBox(
             child: Text(
               'المفضلة',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
               textAlign: TextAlign.right,
             ),
           ),
           SizedBox(
             child: Text(
               'عدد المفضلات',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
               textAlign: TextAlign.right,
             ),
           ),

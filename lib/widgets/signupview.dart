@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:project_visitor_to_eastrn/data/firebaseauth.dart';
+import 'package:email_validator/email_validator.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 
 import '../utils/constants.dart';
 import '../Screens/Signup/components/survey.dart';
@@ -40,8 +42,8 @@ class _SignUpViewState extends State<SignUpView> {
                 indicatorColor: SecondaryPink, //Colors.red,
                 indicatorWeight: 5,
                 tabs: [
-                Tab(child: Text("تسجيل",style: Theme.of(context).textTheme.headline2,),),
-                Tab(child: Text("تسجيل الدخول",style: Theme.of(context).textTheme.headline2,),),
+                Tab(child: Text("تسجيل",style: Theme.of(context).textTheme.displayMedium,),),
+                Tab(child: Text("تسجيل الدخول",style: Theme.of(context).textTheme.displayMedium,),),
               ]),
             ),
             body: TabBarView(
@@ -79,7 +81,7 @@ class _SignUpViewState extends State<SignUpView> {
                     },
                     child: Text(
                       ' اضغط هنا لتسجيل الدخول',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),//
                 ),
@@ -164,48 +166,78 @@ class _SignUpViewState extends State<SignUpView> {
     String _name= name.text.trim();
     String _cpassword = cpassword.text.trim();
 
-    if (_email.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text(
-          'EMAIL MUST BE REQUIRED',
-          textAlign: TextAlign.center,
-        ),
-        backgroundColor: Colors.red,
-      ));
+      if (_email.isEmpty) {
+     AwesomeDialog(
+        context: context,
+        dialogType: DialogType.error,
+        animType: AnimType.bottomSlide,
+        title: 'Email must be required',
+        // btnOkOnPress: () {},
+      ).show();
     } else if (_password.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text(
-          'PASSWORD MUST BE REQUIRED',
-          textAlign: TextAlign.center,
-        ),
-        backgroundColor: Colors.red,
-      ));
+      AwesomeDialog(
+        context: context,
+        dialogType: DialogType.error,
+        animType: AnimType.bottomSlide,
+        title: 'password must be required',
+        // btnOkOnPress: () {},
+      ).show();
     } 
     else if (_name.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text(
-          'NAME MUST BE REQUIRED',
-          textAlign: TextAlign.center,
-        ),
-        backgroundColor: Colors.red,
-      ));
+      AwesomeDialog(
+        context: context,
+        dialogType: DialogType.error,
+        animType: AnimType.bottomSlide,
+        title: 'Name must be required',
+        // btnOkOnPress: () {},
+      ).show();
     }else if (_phone.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text(
-          'PHONE MUST BE REQUIRED',
-          textAlign: TextAlign.center,
-        ),
-        backgroundColor: Colors.red,
-      ));
+      AwesomeDialog(
+        context: context,
+        dialogType: DialogType.error,
+        animType: AnimType.bottomSlide,
+        title: 'phone must be required',
+        // btnOkOnPress: () {},
+      ).show();
     }else if (_cpassword.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text(
-          'CPASSWORD MUST BE REQUIRED',
-          textAlign: TextAlign.center,
-        ),
-        backgroundColor: Colors.red,
-      ));
-    }else {
+      AwesomeDialog(
+        context: context,
+        dialogType: DialogType.error,
+        animType: AnimType.bottomSlide,
+        title: 'Cpassword must be requied',
+        // btnOkOnPress: () {},
+      ).show();
+    }
+    else if (!EmailValidator.validate(email.text)) {
+      AwesomeDialog(
+        context: context,
+        dialogType: DialogType.error,
+        animType: AnimType.bottomSlide,
+        title: 'Input a valid email',
+        // btnOkOnPress: () {},
+      ).show();
+    }
+    else if (password.text!=cpassword.text) {
+      AwesomeDialog(
+        context: context,
+        dialogType: DialogType.error,
+        animType: AnimType.bottomSlide,
+        title: 'passwords ard not matching',
+        // btnOkOnPress: () {},
+      ).show();
+    }
+    else if (phone.text.length!=10) {
+      // ignore: avoid_print
+      print(phone.text.length);
+      AwesomeDialog(
+        context: context,
+        dialogType: DialogType.error,
+        animType: AnimType.bottomSlide,
+        title: 'phone number must be 10 digits',
+        // btnOkOnPress: () {},
+      ).show();
+    }
+    else {
       _controller1.postdata(email.text, name.text, password.text, phone.text);
             ScaffoldMessenger.of(context).hideCurrentSnackBar();
             //  loginUser();

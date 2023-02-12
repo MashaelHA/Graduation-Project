@@ -23,7 +23,7 @@ class Plan extends StatelessWidget {
                   SizedBox(
                     child: Text(
                       'الخطط',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: Theme.of(context).textTheme.displayMedium,
                       textAlign: TextAlign.right,
                     ),
                   ),
@@ -40,7 +40,7 @@ class Plan extends StatelessWidget {
                         ),
                         Text(
                           'الأماكن المفضلة التي تود زيارتها',
-                          style: Theme.of(context).textTheme.subtitle1,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],
                     ),
@@ -58,7 +58,7 @@ class Plan extends StatelessWidget {
                         ),
                         Text(
                           'أنظر إلى أماكنك المفضلة على الخريطة',
-                          style: Theme.of(context).textTheme.subtitle1,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],
                     ),
@@ -76,7 +76,7 @@ class Plan extends StatelessWidget {
                         ),
                         Text(
                           'تتبع الملاحظات والروابط والمزيد',
-                          style: Theme.of(context).textTheme.subtitle1,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],
                     ),
@@ -94,7 +94,7 @@ class Plan extends StatelessWidget {
                         ),
                         Text(
                           'شارك اصدقائك خطتك',
-                          style: Theme.of(context).textTheme.subtitle1,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],
                     ),
@@ -105,7 +105,7 @@ class Plan extends StatelessWidget {
                   SizedBox(
                     width: 200,
                     child: TextFormField(
-                      style: Theme.of(context).textTheme.subtitle1,
+                      style: Theme.of(context).textTheme.titleMedium,
                       decoration: const InputDecoration(
                         hintText: 'اسم الرحلة',
                         filled: true,
@@ -137,7 +137,7 @@ class Plan extends StatelessWidget {
                       ),
                       child: Text(
                         'أصنع رحلة ',
-                        style: Theme.of(context).textTheme.subtitle2,
+                        style: Theme.of(context).textTheme.titleSmall,
                       ),
                     ),
                   ),

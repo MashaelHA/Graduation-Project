@@ -106,7 +106,7 @@ class _FavoraiteState extends State<Favoraite> {
                                   alignment: Alignment.centerRight,
                                   // ignore: prefer_const_constructors
                                   child: Text(
-                                    items[index].cityName,
+                                    items[index].title,
                                     style: const TextStyle(
                                         color: Colors.white, fontSize: 25),
                                   )),

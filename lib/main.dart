@@ -48,37 +48,37 @@ class _MyAppState extends State<MyApp> {
           scaffoldBackgroundColor: Colors.white,
           fontFamily: 'Almarai',
           textTheme: ThemeData.light().textTheme.copyWith(
-              headline6: const TextStyle(
+              titleLarge: const TextStyle(
                 color: SecondaryBlue,
                 fontSize: 20,
                 fontFamily: 'Almarai',
                 fontWeight: FontWeight.bold,
               ),
-              headline5: const TextStyle(
+              headlineSmall: const TextStyle(
                 // color: kPrimaryLightColor,
                 fontSize: 20,
                 fontFamily: 'Almarai',
                 fontWeight: FontWeight.bold,
               ),
-              headline4: const TextStyle(
+              headlineMedium: const TextStyle(
                 color: SecondaryGreen,
                 fontSize: 20,
                 fontFamily: 'Almarai',
                 fontWeight: FontWeight.bold,
               ),
-              headline3: const TextStyle(
+              displaySmall: const TextStyle(
                 color: kPrimaryColor,
                 fontSize: 16,
                 fontFamily: 'Almarai',
                 fontWeight: FontWeight.w500,
               ),
-              headline2: const TextStyle(
+              displayMedium: const TextStyle(
                 color: kTittileColor,
                 fontSize: 20,
                 fontFamily: 'Almarai',
                 fontWeight: FontWeight.w200,
               ),
-              headline1: const TextStyle(
+              displayLarge: const TextStyle(
                 color: kPrimaryColor,
                 fontSize: 20,
                 fontFamily: 'Almarai',
@@ -89,17 +89,17 @@ class _MyAppState extends State<MyApp> {
                 fontFamily: 'Almarai',
                 fontSize: 24,
               ),
-              subtitle1: const TextStyle(
+              titleMedium: const TextStyle(
                   color: kTittileColor,
                   fontFamily: 'Almarai',
                   fontSize: 18,
                   fontWeight: FontWeight.w200),
-              subtitle2: const TextStyle(
+              titleSmall: const TextStyle(
                   color: kPrimaryLightColor,
                   fontFamily: 'Almarai',
                   fontSize: 24,
                   fontWeight: FontWeight.w900),
-              bodyText1: const TextStyle(
+              bodyLarge: const TextStyle(
                 color: kPrimaryLightColor,
                 fontFamily: 'Almarai',
                 fontSize: 20,

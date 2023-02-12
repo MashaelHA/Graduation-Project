@@ -314,7 +314,7 @@ class _HomePageState extends State<VisitorHomePage> {
                                           // "شتوية فاردو",
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline3,
+                                              .displaySmall,
                                         ),
                                         Row(
                                           mainAxisAlignment:

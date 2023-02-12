@@ -57,7 +57,7 @@ class _HeaderState extends State<Header> {
                 Row(
                   children: [
                     const Text(
-                      ' مرحبا , يا',
+                      'مرحبا , يا ',
                       style: TextStyle(color: Colors.red, fontSize: 17),
                     ),
                     Text(

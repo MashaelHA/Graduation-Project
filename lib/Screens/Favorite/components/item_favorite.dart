@@ -66,7 +66,7 @@ class _ItemsFavoriteState extends State<ItemsFavorite> {
                     child: ListTile(
                       title: Text(
                         SelectedPlacesFavorate.title,
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       trailing: const Icon(
                         Icons.arrow_forward_ios,

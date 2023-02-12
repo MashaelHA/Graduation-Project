@@ -74,7 +74,7 @@ class PlaceItem extends StatelessWidget {
                   ),
                   child: Text(
                     title,
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context).textTheme.titleSmall,
                     overflow: TextOverflow.fade,
                   ),
                 ),

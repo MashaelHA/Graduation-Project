@@ -33,7 +33,7 @@ class _CateegoriesState extends State<Cateegories> {
               child: Text(
                 'ما الذي تهتم به أكثر؟',
                 textAlign: TextAlign.right,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),
           ),

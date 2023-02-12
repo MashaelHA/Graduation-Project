@@ -1,22 +1,20 @@
-// ignore_for_file: unused_import, no_leading_underscores_for_local_identifiers
+// ignore_for_file: no_leading_underscores_for_local_identifiers
 
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project_visitor_to_eastrn/data/firebaseauth.dart';
+import '../../../data/firebaseauth.dart';
 
 import '../../../utils/constants.dart';
 import '../../../widgets/signupview.dart';
 import '../../home/components/visitor_home_page.dart';
 import 'background.dart';
-import '../../Signup/signup_screen.dart';
-import '../../home/components/tab.dart';
-// import '../../home/home_as_visitor_screen.dart';
-Firebaseauth firebasecontroller=Firebaseauth();
-TextEditingController email=TextEditingController();
 
-TextEditingController password=TextEditingController();
+Firebaseauth firebasecontroller = Firebaseauth();
+TextEditingController email = TextEditingController();
+
+TextEditingController password = TextEditingController();
+
 // ignore: use_key_in_widget_constructors
 class Body extends StatelessWidget {
   @override
@@ -33,10 +31,6 @@ class Body extends StatelessWidget {
             SizedBox(
               height: size.height * 0.4,
             ),
-            // Image.asset(
-            //   "assets/favicon.png",
-            //   height: size.height * 0.31,
-            // ),
             SizedBox(
               width: 300,
               child: TextFormField(
@@ -69,20 +63,10 @@ class Body extends StatelessWidget {
               width: 300,
               child: TextFormField(
                 controller: password,
-                // obscureText: _isObscured,
                 style: const TextStyle(
                   color: kPrimaryLightColor,
                 ),
                 decoration: const InputDecoration(
-                  // suffixIcon: IconButton(
-                  //   padding: const EdgeInsetsDirectional.only(end: 12.0),
-                  //   icon: _isObscured ? const Icon(Icons.visibility) : const Icon(Icons.visibility_off),
-                  //    onPressed: (){
-                  //     setState((){
-                  //       _isObscured =!_isObscured;
-                  //     });
-                  //    }
-                  //   ),
                   hintText: '********',
                   border: UnderlineInputBorder(),
                   labelText: 'كلمة المرور',
@@ -111,11 +95,10 @@ class Body extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   loginUser(context);
-                
                 },
                 child: Text(
                   'تسجيل الدخول',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
             ),
@@ -124,7 +107,8 @@ class Body extends StatelessWidget {
               child: TextButton(
                 onPressed: () {},
                 child: const Text(
-                  "نسيت كلمة المرور",
+                  "       ",
+                  // "نسيت كلمة المرور",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: kPrimaryLightColor,
@@ -136,28 +120,26 @@ class Body extends StatelessWidget {
               width: size.width * 0.8,
               child: ElevatedButton(
                 onPressed: () {
-                 
-                    var snackbar = SnackBar(
-                        shape: RoundedRectangleBorder(
-                          // ignore: prefer_const_constructors
-                          side: BorderSide(color: Colors.blue, width: 1),
-                          borderRadius: BorderRadius.circular(24),
-                        ),
+                  var snackbar = SnackBar(
+                      shape: RoundedRectangleBorder(
                         // ignore: prefer_const_constructors
-                        duration: Duration(minutes: 2),
-                        backgroundColor: Colors.white,
-                        // ignore: sized_box_for_whitespace
-                        content: Container(
-                          height: height / 1.6,
-                          width: double.infinity,
-                          child: SignUpView(),
-                        ));
-                    ScaffoldMessenger.of(context).showSnackBar(snackbar);
-                  
+                        side: BorderSide(color: Colors.blue, width: 1),
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      // ignore: prefer_const_constructors
+                      duration: Duration(minutes: 2),
+                      backgroundColor: Colors.white,
+                      // ignore: sized_box_for_whitespace
+                      content: Container(
+                        height: height / 1.6,
+                        width: double.infinity,
+                        child: SignUpView(),
+                      ));
+                  ScaffoldMessenger.of(context).showSnackBar(snackbar);
                 },
                 child: Text(
                   'إنشاء حساب جديد',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
             ),
@@ -169,12 +151,15 @@ class Body extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => VisitorHomePage(),
-                      ),);
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => VisitorHomePage(),
+                    ),
+                  );
                 },
                 child: Text(
                   'الدخول كزائر',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
             ),
@@ -183,6 +168,7 @@ class Body extends StatelessWidget {
       ),
     );
   }
+
   void loginUser(context) async {
     String _email = email.text.trim();
     String _password = password.text.trim();
@@ -203,9 +189,16 @@ class Body extends StatelessWidget {
         ),
         backgroundColor: Colors.red,
       ));
+    } else if (!EmailValidator.validate(email.text)) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          'input a valid email',
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.red,
+      ));
     } else {
-      firebasecontroller.getdata(email.text,password.text,context);
-                  
+      firebasecontroller.getdata(email.text, password.text, context);
     }
   }
 }
