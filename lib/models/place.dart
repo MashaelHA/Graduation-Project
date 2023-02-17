@@ -17,7 +17,6 @@ class Places {
   final String cityName;
   final String title;
   final String imageUrlPlace;
-  final List<String> activities;
   final List<String> description;
   final String mapUrl;
   final String evaluation;
@@ -34,7 +33,6 @@ class Places {
     required this.cityName,
     required this.title,
     required this.imageUrlPlace,
-    required this.activities,
     required this.description,
     required this.mapUrl,
     required this.evaluation,
